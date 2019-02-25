@@ -1,0 +1,752 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1564AFBD2221E68C00A5B52B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1564AFBC2221E68C00A5B52B /* AppDelegate.swift */; };
+		1564AFBF2221E68C00A5B52B /* loginPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1564AFBE2221E68C00A5B52B /* loginPageViewController.swift */; };
+		1564AFC22221E68C00A5B52B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1564AFC02221E68C00A5B52B /* Main.storyboard */; };
+		1564AFC42221E68D00A5B52B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1564AFC32221E68D00A5B52B /* Assets.xcassets */; };
+		1564AFD22221E68E00A5B52B /* ShareCostTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1564AFD12221E68E00A5B52B /* ShareCostTests.swift */; };
+		1564AFDD2221E68E00A5B52B /* ShareCostUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1564AFDC2221E68E00A5B52B /* ShareCostUITests.swift */; };
+		1564AFED2221FD4C00A5B52B /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1564AFEC2221FD4C00A5B52B /* NetworkService.swift */; };
+		1564AFEF2222032800A5B52B /* ProfilePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1564AFEE2222032800A5B52B /* ProfilePageViewController.swift */; };
+		1564AFF1222204B200A5B52B /* ContactListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1564AFF0222204B200A5B52B /* ContactListViewController.swift */; };
+		1564AFF3222207F300A5B52B /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1564AFF2222207F300A5B52B /* CalculatorViewController.swift */; };
+		D08D9B0C190E210970773EB3 /* Pods_ShareCost.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CA4265CCCB5DA20817EF2F1 /* Pods_ShareCost.framework */; };
+		DD3C34C2C600A334E28C0823 /* Pods_ShareCostUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACC3DEF6B8A44131EE64EAEC /* Pods_ShareCostUITests.framework */; };
+		F45284A14904F85E0091E446 /* Pods_ShareCostTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F9C9F611E1E655CD5677745 /* Pods_ShareCostTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1564AFCE2221E68E00A5B52B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1564AFB12221E68C00A5B52B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1564AFB82221E68C00A5B52B;
+			remoteInfo = ShareCost;
+		};
+		1564AFD92221E68E00A5B52B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1564AFB12221E68C00A5B52B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1564AFB82221E68C00A5B52B;
+			remoteInfo = ShareCost;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1564AFB92221E68C00A5B52B /* ShareCost.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShareCost.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1564AFBC2221E68C00A5B52B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1564AFBE2221E68C00A5B52B /* loginPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginPageViewController.swift; sourceTree = "<group>"; };
+		1564AFC12221E68C00A5B52B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1564AFC32221E68D00A5B52B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1564AFC82221E68D00A5B52B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1564AFCD2221E68E00A5B52B /* ShareCostTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShareCostTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1564AFD12221E68E00A5B52B /* ShareCostTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareCostTests.swift; sourceTree = "<group>"; };
+		1564AFD32221E68E00A5B52B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1564AFD82221E68E00A5B52B /* ShareCostUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShareCostUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1564AFDC2221E68E00A5B52B /* ShareCostUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareCostUITests.swift; sourceTree = "<group>"; };
+		1564AFDE2221E68E00A5B52B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1564AFEC2221FD4C00A5B52B /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		1564AFEE2222032800A5B52B /* ProfilePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePageViewController.swift; sourceTree = "<group>"; };
+		1564AFF0222204B200A5B52B /* ContactListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListViewController.swift; sourceTree = "<group>"; };
+		1564AFF2222207F300A5B52B /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
+		1CA4265CCCB5DA20817EF2F1 /* Pods_ShareCost.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShareCost.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CDA5BD4D0A2A7E9EBC54791 /* Pods-ShareCostUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShareCostUITests.release.xcconfig"; path = "Target Support Files/Pods-ShareCostUITests/Pods-ShareCostUITests.release.xcconfig"; sourceTree = "<group>"; };
+		8E841F260C104A3ED856662E /* Pods-ShareCostUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShareCostUITests.debug.xcconfig"; path = "Target Support Files/Pods-ShareCostUITests/Pods-ShareCostUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		9F9C9F611E1E655CD5677745 /* Pods_ShareCostTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShareCostTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A950897531348E17F9B421D2 /* Pods-ShareCostTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShareCostTests.debug.xcconfig"; path = "Target Support Files/Pods-ShareCostTests/Pods-ShareCostTests.debug.xcconfig"; sourceTree = "<group>"; };
+		ACC3DEF6B8A44131EE64EAEC /* Pods_ShareCostUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShareCostUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8B0EDED441BDBF76D8E20DC /* Pods-ShareCost.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShareCost.debug.xcconfig"; path = "Target Support Files/Pods-ShareCost/Pods-ShareCost.debug.xcconfig"; sourceTree = "<group>"; };
+		F021BBD53BEB1B0DCC346B76 /* Pods-ShareCost.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShareCost.release.xcconfig"; path = "Target Support Files/Pods-ShareCost/Pods-ShareCost.release.xcconfig"; sourceTree = "<group>"; };
+		F59602977CA4E3EC7EC289C4 /* Pods-ShareCostTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShareCostTests.release.xcconfig"; path = "Target Support Files/Pods-ShareCostTests/Pods-ShareCostTests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1564AFB62221E68C00A5B52B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D08D9B0C190E210970773EB3 /* Pods_ShareCost.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1564AFCA2221E68E00A5B52B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F45284A14904F85E0091E446 /* Pods_ShareCostTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1564AFD52221E68E00A5B52B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD3C34C2C600A334E28C0823 /* Pods_ShareCostUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1564AFB02221E68C00A5B52B = {
+			isa = PBXGroup;
+			children = (
+				1564AFBB2221E68C00A5B52B /* ShareCost */,
+				1564AFD02221E68E00A5B52B /* ShareCostTests */,
+				1564AFDB2221E68E00A5B52B /* ShareCostUITests */,
+				1564AFBA2221E68C00A5B52B /* Products */,
+				D7E14F49205264DA89C110E4 /* Pods */,
+				AC8C85A5C4B15D346F43A1F1 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		1564AFBA2221E68C00A5B52B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1564AFB92221E68C00A5B52B /* ShareCost.app */,
+				1564AFCD2221E68E00A5B52B /* ShareCostTests.xctest */,
+				1564AFD82221E68E00A5B52B /* ShareCostUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1564AFBB2221E68C00A5B52B /* ShareCost */ = {
+			isa = PBXGroup;
+			children = (
+				1564AFEB2221F46F00A5B52B /* NetworkFiles */,
+				1564AFBC2221E68C00A5B52B /* AppDelegate.swift */,
+				1564AFBE2221E68C00A5B52B /* loginPageViewController.swift */,
+				1564AFC02221E68C00A5B52B /* Main.storyboard */,
+				1564AFC32221E68D00A5B52B /* Assets.xcassets */,
+				1564AFC82221E68D00A5B52B /* Info.plist */,
+				1564AFEE2222032800A5B52B /* ProfilePageViewController.swift */,
+				1564AFF0222204B200A5B52B /* ContactListViewController.swift */,
+				1564AFF2222207F300A5B52B /* CalculatorViewController.swift */,
+			);
+			path = ShareCost;
+			sourceTree = "<group>";
+		};
+		1564AFD02221E68E00A5B52B /* ShareCostTests */ = {
+			isa = PBXGroup;
+			children = (
+				1564AFD12221E68E00A5B52B /* ShareCostTests.swift */,
+				1564AFD32221E68E00A5B52B /* Info.plist */,
+			);
+			path = ShareCostTests;
+			sourceTree = "<group>";
+		};
+		1564AFDB2221E68E00A5B52B /* ShareCostUITests */ = {
+			isa = PBXGroup;
+			children = (
+				1564AFDC2221E68E00A5B52B /* ShareCostUITests.swift */,
+				1564AFDE2221E68E00A5B52B /* Info.plist */,
+			);
+			path = ShareCostUITests;
+			sourceTree = "<group>";
+		};
+		1564AFEB2221F46F00A5B52B /* NetworkFiles */ = {
+			isa = PBXGroup;
+			children = (
+				1564AFEC2221FD4C00A5B52B /* NetworkService.swift */,
+			);
+			path = NetworkFiles;
+			sourceTree = "<group>";
+		};
+		AC8C85A5C4B15D346F43A1F1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1CA4265CCCB5DA20817EF2F1 /* Pods_ShareCost.framework */,
+				9F9C9F611E1E655CD5677745 /* Pods_ShareCostTests.framework */,
+				ACC3DEF6B8A44131EE64EAEC /* Pods_ShareCostUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D7E14F49205264DA89C110E4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D8B0EDED441BDBF76D8E20DC /* Pods-ShareCost.debug.xcconfig */,
+				F021BBD53BEB1B0DCC346B76 /* Pods-ShareCost.release.xcconfig */,
+				A950897531348E17F9B421D2 /* Pods-ShareCostTests.debug.xcconfig */,
+				F59602977CA4E3EC7EC289C4 /* Pods-ShareCostTests.release.xcconfig */,
+				8E841F260C104A3ED856662E /* Pods-ShareCostUITests.debug.xcconfig */,
+				4CDA5BD4D0A2A7E9EBC54791 /* Pods-ShareCostUITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1564AFB82221E68C00A5B52B /* ShareCost */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1564AFE12221E68E00A5B52B /* Build configuration list for PBXNativeTarget "ShareCost" */;
+			buildPhases = (
+				92730F92A1DECF83EEBE267F /* [CP] Check Pods Manifest.lock */,
+				1564AFB52221E68C00A5B52B /* Sources */,
+				1564AFB62221E68C00A5B52B /* Frameworks */,
+				1564AFB72221E68C00A5B52B /* Resources */,
+				3F55492855A67C680B7D620D /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ShareCost;
+			productName = ShareCost;
+			productReference = 1564AFB92221E68C00A5B52B /* ShareCost.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1564AFCC2221E68E00A5B52B /* ShareCostTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1564AFE42221E68E00A5B52B /* Build configuration list for PBXNativeTarget "ShareCostTests" */;
+			buildPhases = (
+				1EDA84791F1455A5C6A9A34D /* [CP] Check Pods Manifest.lock */,
+				1564AFC92221E68E00A5B52B /* Sources */,
+				1564AFCA2221E68E00A5B52B /* Frameworks */,
+				1564AFCB2221E68E00A5B52B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1564AFCF2221E68E00A5B52B /* PBXTargetDependency */,
+			);
+			name = ShareCostTests;
+			productName = ShareCostTests;
+			productReference = 1564AFCD2221E68E00A5B52B /* ShareCostTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1564AFD72221E68E00A5B52B /* ShareCostUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1564AFE72221E68E00A5B52B /* Build configuration list for PBXNativeTarget "ShareCostUITests" */;
+			buildPhases = (
+				F78EF5CFC8B545B5CD072C04 /* [CP] Check Pods Manifest.lock */,
+				1564AFD42221E68E00A5B52B /* Sources */,
+				1564AFD52221E68E00A5B52B /* Frameworks */,
+				1564AFD62221E68E00A5B52B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1564AFDA2221E68E00A5B52B /* PBXTargetDependency */,
+			);
+			name = ShareCostUITests;
+			productName = ShareCostUITests;
+			productReference = 1564AFD82221E68E00A5B52B /* ShareCostUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1564AFB12221E68C00A5B52B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "share-cost-project";
+				TargetAttributes = {
+					1564AFB82221E68C00A5B52B = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					1564AFCC2221E68E00A5B52B = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 1564AFB82221E68C00A5B52B;
+					};
+					1564AFD72221E68E00A5B52B = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 1564AFB82221E68C00A5B52B;
+					};
+				};
+			};
+			buildConfigurationList = 1564AFB42221E68C00A5B52B /* Build configuration list for PBXProject "ShareCost" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1564AFB02221E68C00A5B52B;
+			productRefGroup = 1564AFBA2221E68C00A5B52B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1564AFB82221E68C00A5B52B /* ShareCost */,
+				1564AFCC2221E68E00A5B52B /* ShareCostTests */,
+				1564AFD72221E68E00A5B52B /* ShareCostUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1564AFB72221E68C00A5B52B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1564AFC42221E68D00A5B52B /* Assets.xcassets in Resources */,
+				1564AFC22221E68C00A5B52B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1564AFCB2221E68E00A5B52B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1564AFD62221E68E00A5B52B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1EDA84791F1455A5C6A9A34D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ShareCostTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3F55492855A67C680B7D620D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ShareCost/Pods-ShareCost-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ShareCost/Pods-ShareCost-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		92730F92A1DECF83EEBE267F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ShareCost-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F78EF5CFC8B545B5CD072C04 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ShareCostUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1564AFB52221E68C00A5B52B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1564AFBF2221E68C00A5B52B /* loginPageViewController.swift in Sources */,
+				1564AFF1222204B200A5B52B /* ContactListViewController.swift in Sources */,
+				1564AFED2221FD4C00A5B52B /* NetworkService.swift in Sources */,
+				1564AFBD2221E68C00A5B52B /* AppDelegate.swift in Sources */,
+				1564AFF3222207F300A5B52B /* CalculatorViewController.swift in Sources */,
+				1564AFEF2222032800A5B52B /* ProfilePageViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1564AFC92221E68E00A5B52B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1564AFD22221E68E00A5B52B /* ShareCostTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1564AFD42221E68E00A5B52B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1564AFDD2221E68E00A5B52B /* ShareCostUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1564AFCF2221E68E00A5B52B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1564AFB82221E68C00A5B52B /* ShareCost */;
+			targetProxy = 1564AFCE2221E68E00A5B52B /* PBXContainerItemProxy */;
+		};
+		1564AFDA2221E68E00A5B52B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1564AFB82221E68C00A5B52B /* ShareCost */;
+			targetProxy = 1564AFD92221E68E00A5B52B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1564AFC02221E68C00A5B52B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1564AFC12221E68C00A5B52B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1564AFDF2221E68E00A5B52B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1564AFE02221E68E00A5B52B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1564AFE22221E68E00A5B52B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D8B0EDED441BDBF76D8E20DC /* Pods-ShareCost.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X996JLF4V8;
+				INFOPLIST_FILE = ShareCost/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "wc-chen.ShareCost";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1564AFE32221E68E00A5B52B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F021BBD53BEB1B0DCC346B76 /* Pods-ShareCost.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X996JLF4V8;
+				INFOPLIST_FILE = ShareCost/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "wc-chen.ShareCost";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		1564AFE52221E68E00A5B52B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A950897531348E17F9B421D2 /* Pods-ShareCostTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X996JLF4V8;
+				INFOPLIST_FILE = ShareCostTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "wc-chen.ShareCostTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ShareCost.app/ShareCost";
+			};
+			name = Debug;
+		};
+		1564AFE62221E68E00A5B52B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F59602977CA4E3EC7EC289C4 /* Pods-ShareCostTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X996JLF4V8;
+				INFOPLIST_FILE = ShareCostTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "wc-chen.ShareCostTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ShareCost.app/ShareCost";
+			};
+			name = Release;
+		};
+		1564AFE82221E68E00A5B52B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E841F260C104A3ED856662E /* Pods-ShareCostUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X996JLF4V8;
+				INFOPLIST_FILE = ShareCostUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "wc-chen.ShareCostUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ShareCost;
+			};
+			name = Debug;
+		};
+		1564AFE92221E68E00A5B52B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4CDA5BD4D0A2A7E9EBC54791 /* Pods-ShareCostUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X996JLF4V8;
+				INFOPLIST_FILE = ShareCostUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "wc-chen.ShareCostUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ShareCost;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1564AFB42221E68C00A5B52B /* Build configuration list for PBXProject "ShareCost" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1564AFDF2221E68E00A5B52B /* Debug */,
+				1564AFE02221E68E00A5B52B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1564AFE12221E68E00A5B52B /* Build configuration list for PBXNativeTarget "ShareCost" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1564AFE22221E68E00A5B52B /* Debug */,
+				1564AFE32221E68E00A5B52B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1564AFE42221E68E00A5B52B /* Build configuration list for PBXNativeTarget "ShareCostTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1564AFE52221E68E00A5B52B /* Debug */,
+				1564AFE62221E68E00A5B52B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1564AFE72221E68E00A5B52B /* Build configuration list for PBXNativeTarget "ShareCostUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1564AFE82221E68E00A5B52B /* Debug */,
+				1564AFE92221E68E00A5B52B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1564AFB12221E68C00A5B52B /* Project object */;
+}

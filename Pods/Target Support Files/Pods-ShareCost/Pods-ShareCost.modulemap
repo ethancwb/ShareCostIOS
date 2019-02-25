@@ -1,0 +1,6 @@
+framework module Pods_ShareCost {
+  umbrella header "Pods-ShareCost-umbrella.h"
+
+  export *
+  module * { export * }
+}
