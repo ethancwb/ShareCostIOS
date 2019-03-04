@@ -1,14 +1,14 @@
 //
-//  CalculatorViewController.swift
+//  CustomTabBarViewController.swift
 //  ShareCost
 //
-//  Created by Wenbin Chen on 2/23/19.
+//  Created by Wenbin Chen on 3/2/19.
 //  Copyright © 2019 share-cost-project. All rights reserved.
 //
 
 import UIKit
 
-class CalculatorViewController: UIViewController {
+class CustomTabBarViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -1,5 +1,5 @@
 //
-//  ProfilePageViewController.swift
+//  CalculatorViewController.swift
 //  ShareCost
 //
 //  Created by Wenbin Chen on 2/23/19.
@@ -8,12 +8,14 @@
 
 import UIKit
 
-class ProfilePageViewController: UIViewController {
+class CalculatorViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        super.viewDidLoad()
+        let backgroundImage = addBackground()
+        self.view.addSubview(backgroundImage)
+        self.view.sendSubviewToBack(backgroundImage)
     }
     
 

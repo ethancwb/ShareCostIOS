@@ -12,8 +12,10 @@ class ContactListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        super.viewDidLoad()
+        let backgroundImage = addBackground()
+        self.view.addSubview(backgroundImage)
+        self.view.sendSubviewToBack(backgroundImage)
     }
     
 
