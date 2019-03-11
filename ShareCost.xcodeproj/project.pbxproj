@@ -23,6 +23,8 @@
 		159750D3222B3FD4006427BA /* CustomTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 159750D2222B3FD4006427BA /* CustomTabBarViewController.swift */; };
 		159750D5222B4786006427BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 159750D4222B4786006427BA /* LaunchScreen.storyboard */; };
 		159750D7222B4947006427BA /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 159750D6222B4947006427BA /* LaunchScreenViewController.swift */; };
+		15A2BC342234A0F200ED5263 /* TabBarSubViewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A2BC332234A0F200ED5263 /* TabBarSubViewsViewController.swift */; };
+		15A2BC362234A4E500ED5263 /* CustomTabBarControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A2BC352234A4E500ED5263 /* CustomTabBarControllerViewController.swift */; };
 		D08D9B0C190E210970773EB3 /* Pods_ShareCost.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CA4265CCCB5DA20817EF2F1 /* Pods_ShareCost.framework */; };
 		DD3C34C2C600A334E28C0823 /* Pods_ShareCostUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACC3DEF6B8A44131EE64EAEC /* Pods_ShareCostUITests.framework */; };
 		F45284A14904F85E0091E446 /* Pods_ShareCostTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F9C9F611E1E655CD5677745 /* Pods_ShareCostTests.framework */; };
@@ -68,6 +70,8 @@
 		159750D2222B3FD4006427BA /* CustomTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarViewController.swift; sourceTree = "<group>"; };
 		159750D4222B4786006427BA /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		159750D6222B4947006427BA /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
+		15A2BC332234A0F200ED5263 /* TabBarSubViewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarSubViewsViewController.swift; sourceTree = "<group>"; };
+		15A2BC352234A4E500ED5263 /* CustomTabBarControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarControllerViewController.swift; sourceTree = "<group>"; };
 		1CA4265CCCB5DA20817EF2F1 /* Pods_ShareCost.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShareCost.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CDA5BD4D0A2A7E9EBC54791 /* Pods-ShareCostUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShareCostUITests.release.xcconfig"; path = "Target Support Files/Pods-ShareCostUITests/Pods-ShareCostUITests.release.xcconfig"; sourceTree = "<group>"; };
 		8E841F260C104A3ED856662E /* Pods-ShareCostUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShareCostUITests.debug.xcconfig"; path = "Target Support Files/Pods-ShareCostUITests/Pods-ShareCostUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -176,6 +180,7 @@
 				159750C9222B252E006427BA /* CustomTextField.swift */,
 				159750D0222B3DEA006427BA /* CustomNavigationBarViewController.swift */,
 				159750D2222B3FD4006427BA /* CustomTabBarViewController.swift */,
+				15A2BC352234A4E500ED5263 /* CustomTabBarControllerViewController.swift */,
 			);
 			path = Subclasses;
 			sourceTree = "<group>";
@@ -188,6 +193,7 @@
 				1564AFF0222204B200A5B52B /* ContactListViewController.swift */,
 				1564AFF2222207F300A5B52B /* CalculatorViewController.swift */,
 				159750D6222B4947006427BA /* LaunchScreenViewController.swift */,
+				15A2BC332234A0F200ED5263 /* TabBarSubViewsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -464,10 +470,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15A2BC342234A0F200ED5263 /* TabBarSubViewsViewController.swift in Sources */,
 				159750D1222B3DEA006427BA /* CustomNavigationBarViewController.swift in Sources */,
 				159750CA222B252E006427BA /* CustomTextField.swift in Sources */,
 				1564AFBF2221E68C00A5B52B /* loginPageViewController.swift in Sources */,
 				159750CF222B34D3006427BA /* utilFactory.swift in Sources */,
+				15A2BC362234A4E500ED5263 /* CustomTabBarControllerViewController.swift in Sources */,
 				1564AFF1222204B200A5B52B /* ContactListViewController.swift in Sources */,
 				1564AFED2221FD4C00A5B52B /* NetworkService.swift in Sources */,
 				159750D3222B3FD4006427BA /* CustomTabBarViewController.swift in Sources */,

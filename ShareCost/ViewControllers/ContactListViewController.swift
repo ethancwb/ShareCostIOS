@@ -8,14 +8,11 @@
 
 import UIKit
 
-class ContactListViewController: UIViewController {
+class ContactListViewController: TabBarSubViewsViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        super.viewDidLoad()
-        let backgroundImage = addBackground()
-        self.view.addSubview(backgroundImage)
-        self.view.sendSubviewToBack(backgroundImage)
+        self.navigationItem.title = "My Contacts"
     }
     
 

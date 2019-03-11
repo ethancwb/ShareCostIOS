@@ -99,55 +99,138 @@
         <!--Profile-->
         <scene sceneID="VzO-iu-EUk">
             <objects>
-                <viewController id="oED-Uh-GPo" userLabel="Profile" customClass="ProfilePageViewController" customModule="ShareCost" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="My Profile" extendedLayoutIncludesOpaqueBars="YES" id="oED-Uh-GPo" userLabel="Profile" customClass="ProfilePageViewController" customModule="ShareCost" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="z5g-oJ-HnR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E6V-Z3-Vq6">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="396"/>
+                                <subviews>
+                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3wJ-vt-Ba1" userLabel="Avatar">
+                                        <rect key="frame" x="157" y="128" width="100" height="100"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="Ssy-kJ-5jG"/>
+                                            <constraint firstAttribute="height" constant="100" id="z4G-se-ehh"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="onAvatarClicked:" destination="oED-Uh-GPo" eventType="touchUpInside" id="UKu-6z-LOD"/>
+                                        </connections>
+                                    </button>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Username" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="83T-SG-4bE" userLabel="Username">
+                                        <rect key="frame" x="80" y="243" width="254" height="20"/>
+                                        <color key="backgroundColor" red="0.56646156309999995" green="0.74844294789999999" blue="0.77647775409999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="nJV-a9-iC6"/>
+                                        </constraints>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Balance:" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6vd-uw-xt4" userLabel="Balance">
+                                        <rect key="frame" x="80" y="263" width="254" height="20"/>
+                                        <color key="backgroundColor" red="0.56646156309999995" green="0.74844294789999999" blue="0.77647775409999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="48P-jz-15A"/>
+                                        </constraints>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.56646156309999995" green="0.74844294789999999" blue="0.77647775409999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="83T-SG-4bE" firstAttribute="top" secondItem="3wJ-vt-Ba1" secondAttribute="bottom" constant="15" id="Iaj-Ff-fYM"/>
+                                    <constraint firstAttribute="trailing" secondItem="6vd-uw-xt4" secondAttribute="trailing" constant="80" id="Ioz-yF-Qd2"/>
+                                    <constraint firstItem="3wJ-vt-Ba1" firstAttribute="centerY" secondItem="E6V-Z3-Vq6" secondAttribute="centerY" constant="-20" id="J0r-eb-Eza"/>
+                                    <constraint firstItem="6vd-uw-xt4" firstAttribute="top" secondItem="83T-SG-4bE" secondAttribute="bottom" id="KIr-km-lZf"/>
+                                    <constraint firstItem="83T-SG-4bE" firstAttribute="leading" secondItem="E6V-Z3-Vq6" secondAttribute="leading" constant="80" id="Nka-23-bBb"/>
+                                    <constraint firstItem="3wJ-vt-Ba1" firstAttribute="centerX" secondItem="E6V-Z3-Vq6" secondAttribute="centerX" id="Urx-er-wbR"/>
+                                    <constraint firstAttribute="trailing" secondItem="83T-SG-4bE" secondAttribute="trailing" constant="80" id="bcG-se-EZ7"/>
+                                    <constraint firstItem="6vd-uw-xt4" firstAttribute="leading" secondItem="E6V-Z3-Vq6" secondAttribute="leading" constant="80" id="ewm-gO-oFM"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9yg-vU-RCF">
+                                <rect key="frame" x="0.0" y="431" width="414" height="240"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="4On-aS-NGe"/>
+                                </constraints>
+                            </tableView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uDF-h3-2Mu" userLabel="LogoutSettingTable">
+                                <rect key="frame" x="0.0" y="706" width="414" height="65"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="dzn-3g-h6i"/>
+                                </constraints>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.90000000000000002" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="E6V-Z3-Vq6" firstAttribute="top" secondItem="z5g-oJ-HnR" secondAttribute="top" id="2ap-ZQ-hwF"/>
+                            <constraint firstItem="uDF-h3-2Mu" firstAttribute="trailing" secondItem="n6Z-jT-y2i" secondAttribute="trailing" id="9t3-5y-lmW"/>
+                            <constraint firstItem="E6V-Z3-Vq6" firstAttribute="trailing" secondItem="n6Z-jT-y2i" secondAttribute="trailing" id="Dyo-OW-AlZ"/>
+                            <constraint firstItem="9yg-vU-RCF" firstAttribute="trailing" secondItem="n6Z-jT-y2i" secondAttribute="trailing" id="GuZ-UH-mOM"/>
+                            <constraint firstItem="uDF-h3-2Mu" firstAttribute="leading" secondItem="n6Z-jT-y2i" secondAttribute="leading" id="I4s-IM-8en"/>
+                            <constraint firstItem="uDF-h3-2Mu" firstAttribute="top" secondItem="9yg-vU-RCF" secondAttribute="bottom" constant="35" id="Joe-cn-LKE"/>
+                            <constraint firstItem="9yg-vU-RCF" firstAttribute="leading" secondItem="n6Z-jT-y2i" secondAttribute="leading" id="Rvy-o5-dfJ"/>
+                            <constraint firstAttribute="bottom" secondItem="E6V-Z3-Vq6" secondAttribute="bottom" constant="500" id="Xvo-xR-fh9"/>
+                            <constraint firstItem="E6V-Z3-Vq6" firstAttribute="leading" secondItem="n6Z-jT-y2i" secondAttribute="leading" id="jsv-4d-BOQ"/>
+                            <constraint firstItem="9yg-vU-RCF" firstAttribute="top" secondItem="E6V-Z3-Vq6" secondAttribute="bottom" constant="35" id="t0P-CB-KnB"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="n6Z-jT-y2i"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="Anl-S8-AMT"/>
+                    <navigationItem key="navigationItem" id="gne-s9-LKF"/>
+                    <connections>
+                        <outlet property="avatarButton" destination="3wJ-vt-Ba1" id="9co-qC-Ndo"/>
+                        <outlet property="profileSettingTable" destination="9yg-vU-RCF" id="iHX-Xw-967"/>
+                        <outlet property="userBalanceField" destination="6vd-uw-xt4" id="bxo-KZ-b5B"/>
+                        <outlet property="usernameField" destination="83T-SG-4bE" id="sgB-WA-s0Q"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l5B-jl-IQS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="887" y="143"/>
+            <point key="canvasLocation" x="1797.1014492753625" y="142.63392857142856"/>
         </scene>
         <!--Calculate-->
         <scene sceneID="nFa-iB-JQF">
             <objects>
-                <viewController id="6h6-R1-StO" userLabel="Calculate" customClass="CalculatorViewController" customModule="ShareCost" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Calculator" id="6h6-R1-StO" userLabel="Calculate" customClass="CalculatorViewController" customModule="ShareCost" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SCc-L5-Prz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="SLA-e3-LgE"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="iY8-O3-Vb4"/>
+                    <navigationItem key="navigationItem" id="qxn-iR-Ir8"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sud-Ta-f0m" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="888" y="1093"/>
+            <point key="canvasLocation" x="1797.1014492753625" y="1092.8571428571429"/>
         </scene>
         <!--Contacts-->
         <scene sceneID="hk9-ul-Xcq">
             <objects>
-                <viewController id="FrE-fg-hnQ" userLabel="Contacts" customClass="ContactListViewController" customModule="ShareCost" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Contacts" id="FrE-fg-hnQ" userLabel="Contacts" customClass="ContactListViewController" customModule="ShareCost" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="biv-hZ-FyQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="8QV-OK-Vij"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="fp2-qV-Q5G"/>
+                    <navigationItem key="navigationItem" id="QCY-e0-EAw"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I7u-4f-LKj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="887" y="-796"/>
+            <point key="canvasLocation" x="1797.1014492753625" y="-796.20535714285711"/>
         </scene>
         <!--Custom Navigation Bar View Controller-->
         <scene sceneID="Mbo-Wo-sLz">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xS9-f6-apl" customClass="CustomNavigationBarViewController" customModule="ShareCost" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="navigationController" automaticallyAdjustsScrollViewInsets="NO" id="xS9-f6-apl" customClass="CustomNavigationBarViewController" customModule="ShareCost" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="76F-rp-y8P">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -162,27 +245,89 @@
             </objects>
             <point key="canvasLocation" x="-1946.376811594203" y="142.63392857142856"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--TabController-->
         <scene sceneID="cD8-3e-CA2">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="EwO-ok-Vea" sceneMemberID="viewController">
+                <tabBarController title="TabController" automaticallyAdjustsScrollViewInsets="NO" id="EwO-ok-Vea" customClass="CustomTabBarControllerViewController" customModule="ShareCost" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="lMi-zO-0bg">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="oED-Uh-GPo" kind="relationship" relationship="viewControllers" id="Vmz-i0-jVT"/>
-                        <segue destination="6h6-R1-StO" kind="relationship" relationship="viewControllers" id="plL-O9-4HB"/>
-                        <segue destination="FrE-fg-hnQ" kind="relationship" relationship="viewControllers" id="bqi-xe-6bu"/>
+                        <segue destination="I0c-z6-CF2" kind="relationship" relationship="viewControllers" id="Vmz-i0-jVT"/>
+                        <segue destination="1U4-vR-MsN" kind="relationship" relationship="viewControllers" id="plL-O9-4HB"/>
+                        <segue destination="zde-7D-zzK" kind="relationship" relationship="viewControllers" id="bqi-xe-6bu"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kcj-m9-NKN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-200.00000000000003" y="142.63392857142856"/>
         </scene>
+        <!--Calculate-->
+        <scene sceneID="hVJ-20-sf5">
+            <objects>
+                <navigationController title="Calculate" automaticallyAdjustsScrollViewInsets="NO" id="1U4-vR-MsN" customClass="CustomNavigationBarViewController" customModule="ShareCost" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Calculator" image="pay_icon" id="iY8-O3-Vb4"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="tLc-fx-M0P">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="6h6-R1-StO" kind="relationship" relationship="rootViewController" id="Ym5-iI-Ltf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mBz-bB-gHW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="886.95652173913049" y="1092.8571428571429"/>
+        </scene>
+        <!--My Profile-->
+        <scene sceneID="Nl9-cd-8uu">
+            <objects>
+                <navigationController title="My Profile" automaticallyAdjustsScrollViewInsets="NO" id="I0c-z6-CF2" customClass="CustomNavigationBarViewController" customModule="ShareCost" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Profile" image="profile_icon" id="Anl-S8-AMT"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="waU-I5-F9c">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="oED-Uh-GPo" kind="relationship" relationship="rootViewController" id="MrI-yh-psm"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N0x-bf-5Dq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="886.95652173913049" y="142.63392857142856"/>
+        </scene>
+        <!--Contacts-->
+        <scene sceneID="UE9-zR-Cl4">
+            <objects>
+                <navigationController title="Contacts" automaticallyAdjustsScrollViewInsets="NO" id="zde-7D-zzK" customClass="CustomNavigationBarViewController" customModule="ShareCost" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Contacts" image="contact_icon" id="fp2-qV-Q5G"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Sf1-FR-H8o">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="FrE-fg-hnQ" kind="relationship" relationship="rootViewController" id="4w8-dH-VHd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ogx-nx-LSV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="886.95652173913049" y="-796.20535714285711"/>
+        </scene>
     </scenes>
     <resources>
         <image name="app_logo" width="36" height="36"/>
+        <image name="contact_icon" width="80" height="80"/>
+        <image name="pay_icon" width="80" height="80"/>
+        <image name="profile_icon" width="80" height="80"/>
     </resources>
+    <color key="tintColor" red="1" green="0.99997597932815552" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
 </document>

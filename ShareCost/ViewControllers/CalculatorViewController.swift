@@ -8,14 +8,11 @@
 
 import UIKit
 
-class CalculatorViewController: UIViewController {
+class CalculatorViewController: TabBarSubViewsViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        super.viewDidLoad()
-        let backgroundImage = addBackground()
-        self.view.addSubview(backgroundImage)
-        self.view.sendSubviewToBack(backgroundImage)
+        self.navigationItem.title = "Calculate Bills"
     }
     
 
