@@ -10,10 +10,21 @@ import UIKit
 
 class ProfilePageViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    @IBOutlet weak var logoutSettingsTable: UITableView!
     @IBOutlet weak var avatarButton: UIButton!
     @IBOutlet weak var profileSettingTable: UITableView!
     @IBOutlet weak var userBalanceField: UITextView!
     @IBOutlet weak var usernameField: UITextView!
+    var profileSettings : [String] = [
+        "My Profile",
+        "All Transactions",
+        "Friend Requests",
+        "Contact Us"
+    ]
+    var logoutSettings : [String] = [
+        "Logout",
+        "Delete Account"
+    ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +32,17 @@ class ProfilePageViewController: UIViewController, UITableViewDelegate, UITableV
         self.setupAvatarView()
         self.profileSettingTable.dataSource = self
         self.profileSettingTable.delegate = self
+        self.logoutSettingsTable.dataSource = self
+        self.logoutSettingsTable.delegate = self
+        self.profileSettingTable.frame = CGRect(x: self.profileSettingTable.frame.origin.x, y: self.profileSettingTable.frame.origin.y, width: self.profileSettingTable.frame.size.width, height: self.profileSettingTable.contentSize.height)
+        self.logoutSettingsTable.frame = CGRect(x: self.logoutSettingsTable.frame.origin.x, y: self.logoutSettingsTable.frame.origin.y, width: self.logoutSettingsTable.frame.size.width, height: self.logoutSettingsTable.contentSize.height)
+    }
+    
+    override func viewDidLayoutSubviews() {
+        self.profileSettingTable.frame = CGRect(x: self.profileSettingTable.frame.origin.x, y: self.profileSettingTable.frame.origin.y, width: self.profileSettingTable.frame.size.width, height: self.profileSettingTable.contentSize.height)
+        self.logoutSettingsTable.frame = CGRect(x: self.logoutSettingsTable.frame.origin.x, y: self.profileSettingTable.frame.origin.y + self.profileSettingTable.contentSize.height+35, width: self.logoutSettingsTable.frame.size.width, height: self.logoutSettingsTable.contentSize.height)
+        self.profileSettingTable.reloadData()
+        self.logoutSettingsTable.reloadData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -38,11 +60,29 @@ class ProfilePageViewController: UIViewController, UITableViewDelegate, UITableV
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5;
+        if (tableView == profileSettingTable) {
+            return self.profileSettings.count
+        } else {
+            return self.logoutSettings.count
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return nil;
+        if (tableView == profileSettingTable) {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "generalSettingCell", for:indexPath)
+            let item = self.profileSettings[indexPath.item]
+            cell.textLabel?.text = item
+            cell.imageView?.image = UIImage(named: "\(item.replacingOccurrences(of: " ", with: ""))Icon")
+            cell.separatorInset = UIEdgeInsets.zero
+            return cell
+        } else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "generalSettingCell", for:indexPath)
+            let item = self.logoutSettings[indexPath.item]
+            cell.textLabel?.text = item
+            cell.imageView?.image = UIImage(named: "\(item.replacingOccurrences(of: " ", with: ""))Icon")
+            cell.separatorInset = UIEdgeInsets.zero
+            return cell
+        }
     }
     
     
