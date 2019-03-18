@@ -11,9 +11,11 @@ import Foundation
 
 class loginPageViewController: UIViewController {
     
+    @IBOutlet weak var registerButton: UIButton!
     @IBOutlet weak var usernameField: CustomTextField!
     @IBOutlet weak var passwordField: CustomTextField!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var loginButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,6 +41,10 @@ class loginPageViewController: UIViewController {
 //            self.passwordField
 //        }
 //    }
+    @IBAction func onRegisterPressed(_ sender: Any) {
+        self.activityIndicator.isHidden = false
+        self.performSegue(withIdentifier: "registerSegue", sender: nil)
+    }
     
     @IBAction func onLoginPressed(_ sender: Any) {
         self.activityIndicator.isHidden = false

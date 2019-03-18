@@ -16,22 +16,35 @@ class TabBarSubViewsViewController: UIViewController, UISearchResultsUpdating, U
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let backgroundImage = addBackground()
-        self.view.addSubview(backgroundImage)
-        self.view.sendSubviewToBack(backgroundImage)
+//        let backgroundImage = addBackground()
+//        self.view.addSubview(backgroundImage)
+//        self.view.sendSubviewToBack(backgroundImage)
         self.setupNavigationBar()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+    
     func setupNavigationBar() {
+        self.navigationController?.navigationBar.barTintColor = getHeaderColor()
         self.navigationController?.navigationBar.isHidden = false
         self.navigationController?.navigationItem.largeTitleDisplayMode = .always
         self.navigationController?.navigationBar.prefersLargeTitles = true
         let searchbar = UISearchController(searchResultsController: nil)
+        if let searchfield = searchbar.searchBar.value(forKey: "searchField") as? UITextField {
+            searchfield.backgroundColor = UIColor.white
+            let searchbarBackground = searchfield.subviews.first
+            searchbarBackground?.backgroundColor = UIColor.white
+            searchbarBackground?.layer.cornerRadius = 10
+            searchbarBackground?.clipsToBounds = true
+        }
         self.navigationItem.searchController = searchbar
         searchbar.searchResultsUpdater = self
         searchbar.delegate = self
         self.navigationItem.searchController?.dimsBackgroundDuringPresentation = false
         self.navigationItem.searchController?.hidesNavigationBarDuringPresentation = false
+        self.navigationItem.hidesSearchBarWhenScrolling = false
     }
 
 }

@@ -16,17 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var navigationController: CustomNavigationBarViewController?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-        
-//        window = UIWindow(frame: UIScreen.main.bounds)
-//
-//        if let window = window {
-//            let mainVC = loginPageViewController()
-//            navigationController = UINavigationController(rootViewController: mainVC)
-//            window.rootViewController = navigationController
-//            window.makeKeyAndVisible()
-//        }
-//
+//        UINavigationBar.appearance().backgroundColor = getHeaderColor()
+//        UIBarButtonItem.appearance().tintColor = getHeaderColor()
         return true
     }
 

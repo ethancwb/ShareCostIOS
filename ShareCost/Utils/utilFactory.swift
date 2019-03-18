@@ -21,3 +21,15 @@ func addBackground() -> UIImageView {
     
     return imageViewBackground
 }
+
+func getHeaderColor() -> UIColor {
+    return UIColor(red:0.56, green:0.75, blue:0.78, alpha:1.0)
+}
+
+func resizeImage(image: UIImage, toSize: CGSize) -> UIImage? {
+    UIGraphicsBeginImageContext(toSize)
+    image.draw(in: CGRect.init(x: 0, y: 0, width: toSize.width, height: toSize.height))
+    let newImage = UIGraphicsGetImageFromCurrentImageContext()
+    UIGraphicsEndImageContext()
+    return newImage
+}
