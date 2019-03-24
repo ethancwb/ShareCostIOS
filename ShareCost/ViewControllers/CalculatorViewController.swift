@@ -22,18 +22,22 @@ class CalculatorViewController: TabBarSubViewsViewController {
         super.viewDidLoad()
         self.navigationItem.searchController = nil
         self.navigationItem.title = "New Transcation"
-        self.navigationController?.navigationBar.isHidden = true
         transcationTitle.delegate = self
         totalAmount.delegate = self
         commentView.delegate = self
-        setupCommentPlaceholder()
         self.definesPresentationContext = true
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.isHidden = true
+        self.totalAmount.text = ""
+        self.transcationTitle.text = ""
+        setupCommentPlaceholder()
+        dottedBorder()
         if (selectedUsers != []) {
             self.performSegue(withIdentifier: "toSplitBill", sender: nil)
+            selectedUsers = []
         }
     }
     
@@ -41,6 +45,9 @@ class CalculatorViewController: TabBarSubViewsViewController {
         if segue.identifier == "toSplitBill" {
             if let vc = segue.destination as? SplitWeightViewController {
                 vc.userList = self.selectedUsers
+                if let total = totalAmount.text {
+                    vc.totalCount = Int(total) ?? 0
+                }
             }
         }
     }
@@ -88,6 +95,17 @@ class CalculatorViewController: TabBarSubViewsViewController {
             setupCommentPlaceholder()
         }
     }
+    
+//    func dottedBorder() {
+//        let bottomLine = CALayer()
+//        bottomLine.frame = CGRect.init(x: 0, y: transcationTitle.frame.size.height - 1, width: transcationTitle.frame.size.width, height: 1)
+//        bottomLine.backgroundColor = UIColor.gray.cgColor
+//        transcationTitle.layer.addSublayer(bottomLine)
+//        let bottomLine2 = CALayer()
+//        bottomLine2.frame = CGRect.init(x: 0, y: totalAmount.frame.size.height - 1, width: totalAmount.frame.size.width, height: 1)
+//        bottomLine2.backgroundColor = UIColor.gray.cgColor
+//        totalAmount.layer.addSublayer(bottomLine2)
+//    }
 }
 
 extension UIColor {

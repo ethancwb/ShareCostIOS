@@ -12,6 +12,7 @@ class SplitWeightViewController: UIViewController, UITableViewDataSource, UITabl
     
     @IBOutlet weak var userWeightTable: UITableView!
     public var userList : [String] = []
+    public var totalCount : Int = 0
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return userList.count
@@ -24,7 +25,7 @@ class SplitWeightViewController: UIViewController, UITableViewDataSource, UITabl
         }
         cell.avatar.clipsToBounds = true
         cell.username.text = userList[indexPath.item]
-        cell.weightInput.text = String(Double(1 / userList.count))
+        cell.weightInput.text = String(format: "%.2f", (1 / Double(userList.count) * 100))
         cell.separatorInset = UIEdgeInsets.zero
         return cell
     }
@@ -39,12 +40,14 @@ class SplitWeightViewController: UIViewController, UITableViewDataSource, UITabl
     
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.navigationBar.isHidden = false
+        setupDoneButton()
         super.viewWillAppear(animated)
     }
     
     func setupDoneButton() {
         let doneButton = UIBarButtonItem.init(barButtonSystemItem: .done, target: self, action: #selector(onDone))
         self.navigationItem.rightBarButtonItem = doneButton
+        self.navigationItem.leftBarButtonItem = nil
     }
     
     @objc func onDone() {
