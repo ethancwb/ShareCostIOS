@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TabBarSubViewsViewController: UIViewController, UISearchResultsUpdating, UISearchControllerDelegate {
+class TabBarSubViewsViewController: UIViewController, UISearchResultsUpdating, UISearchControllerDelegate, UITextFieldDelegate, UITextViewDelegate {
     
     func updateSearchResults(for searchController: UISearchController) {
         

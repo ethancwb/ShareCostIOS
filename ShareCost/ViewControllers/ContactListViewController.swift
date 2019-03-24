@@ -11,6 +11,8 @@ import UIKit
 class ContactListViewController: TabBarSubViewsViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var FriendList: UITableView!
+    public var isModalMode : Bool = false
+    public var delegate : CalculatorViewController?
     
     var dummy_users = ["Paul", "Monica", "Lisa", "Bill", "Kevin", "Louise"]
     var dummy_balance = ["-$30.0", "$52.5", "-$34.2", "$72.8", "$12.0", "-$24.0"]
@@ -46,12 +48,57 @@ class ContactListViewController: TabBarSubViewsViewController, UITableViewDelega
         }
         return [delete]
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if self.isModalMode {
+            if let cell = tableView.cellForRow(at: indexPath) {
+                cell.accessoryType = .checkmark
+            }
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        if self.isModalMode {
+            if let cell = tableView.cellForRow(at: indexPath) {
+                cell.accessoryType = .none
+            }
+        }
+    }
+    
+    func setupModalView() {
+        let leftButton = UIBarButtonItem.init(barButtonSystemItem: .cancel, target: self, action: #selector(pressedCancel))
+        let rightButton = UIBarButtonItem.init(barButtonSystemItem: .done, target: self, action: #selector(pressedDone))
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        self.navigationItem.leftBarButtonItem = leftButton
+        self.navigationItem.rightBarButtonItem = rightButton
+    }
+    
+    @objc func pressedCancel() {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    @objc func pressedDone() {
+        if let selectedUsers = (FriendList.visibleCells.filter { $0.accessoryType == .checkmark }) as? [FriendsTableViewCell] {
+            delegate?.selectedUsers = selectedUsers.map { $0.username.text ?? "" }
+        }
+        self.dismiss(animated: true, completion: nil)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = "Friends"
         self.FriendList.delegate = self
         self.FriendList.dataSource = self
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if (self.isModalMode) {
+            self.navigationItem.largeTitleDisplayMode = .never
+            setupModalView()
+            self.FriendList.allowsMultipleSelection = true
+            self.FriendList.allowsSelectionDuringEditing = true
+        }
     }
     
 }
