@@ -25,6 +25,7 @@ class ProfilePageViewController: UIViewController, UITableViewDelegate, UITableV
         "Logout",
         "Delete Account"
     ]
+    var profileSegues : [String] = ["editProfile", "transcations"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -83,6 +84,11 @@ class ProfilePageViewController: UIViewController, UITableViewDelegate, UITableV
             cell.separatorInset = UIEdgeInsets.zero
             return cell
         }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        self.performSegue(withIdentifier: profileSegues[indexPath.item], sender: nil)
     }
     
     

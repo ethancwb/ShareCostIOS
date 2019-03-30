@@ -20,6 +20,7 @@ class CustomNavigationBarViewController: UINavigationController {
         self.navigationBar.isTranslucent = false
         self.navigationBar.barTintColor = getHeaderColor()
         self.navigationBar.backgroundColor = getHeaderColor()
+        self.navigationBar.shadowImage = UIImage.init()
     }
 
 }

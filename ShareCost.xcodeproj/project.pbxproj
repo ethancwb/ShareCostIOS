@@ -19,6 +19,10 @@
 		1564AFEF2222032800A5B52B /* ProfilePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1564AFEE2222032800A5B52B /* ProfilePageViewController.swift */; };
 		1564AFF1222204B200A5B52B /* ContactListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1564AFF0222204B200A5B52B /* ContactListViewController.swift */; };
 		1564AFF3222207F300A5B52B /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1564AFF2222207F300A5B52B /* CalculatorViewController.swift */; };
+		156D1E7D224FFC3100B09632 /* editProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156D1E7C224FFC3100B09632 /* editProfileViewController.swift */; };
+		156D1E7F2250023B00B09632 /* editProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156D1E7E2250023B00B09632 /* editProfileTableViewCell.swift */; };
+		156D1E8122501F6C00B09632 /* transcationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156D1E8022501F6C00B09632 /* transcationTableViewCell.swift */; };
+		156D1E832250214200B09632 /* transcationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156D1E822250214200B09632 /* transcationTableViewController.swift */; };
 		159750CA222B252E006427BA /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 159750C9222B252E006427BA /* CustomTextField.swift */; };
 		159750CF222B34D3006427BA /* utilFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 159750CE222B34D3006427BA /* utilFactory.swift */; };
 		159750D1222B3DEA006427BA /* CustomNavigationBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 159750D0222B3DEA006427BA /* CustomNavigationBarViewController.swift */; };
@@ -69,6 +73,10 @@
 		1564AFEE2222032800A5B52B /* ProfilePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePageViewController.swift; sourceTree = "<group>"; };
 		1564AFF0222204B200A5B52B /* ContactListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListViewController.swift; sourceTree = "<group>"; };
 		1564AFF2222207F300A5B52B /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
+		156D1E7C224FFC3100B09632 /* editProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = editProfileViewController.swift; sourceTree = "<group>"; };
+		156D1E7E2250023B00B09632 /* editProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = editProfileTableViewCell.swift; sourceTree = "<group>"; };
+		156D1E8022501F6C00B09632 /* transcationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = transcationTableViewCell.swift; sourceTree = "<group>"; };
+		156D1E822250214200B09632 /* transcationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = transcationTableViewController.swift; sourceTree = "<group>"; };
 		159750C9222B252E006427BA /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		159750CE222B34D3006427BA /* utilFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = utilFactory.swift; sourceTree = "<group>"; };
 		159750D0222B3DEA006427BA /* CustomNavigationBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationBarViewController.swift; sourceTree = "<group>"; };
@@ -188,6 +196,7 @@
 				15A2BC352234A4E500ED5263 /* CustomTabBarControllerViewController.swift */,
 				15211940223DF3D60015409B /* FriendsTableViewCell.swift */,
 				15D6FC382247268300FA6E74 /* WeightTableViewCell.swift */,
+				156D1E7E2250023B00B09632 /* editProfileTableViewCell.swift */,
 			);
 			path = Subclasses;
 			sourceTree = "<group>";
@@ -203,6 +212,9 @@
 				15A2BC332234A0F200ED5263 /* TabBarSubViewsViewController.swift */,
 				1521193E223DDE210015409B /* RegisterPageViewController.swift */,
 				15D6FC362247215000FA6E74 /* SplitWeightVIewController.swift */,
+				156D1E7C224FFC3100B09632 /* editProfileViewController.swift */,
+				156D1E8022501F6C00B09632 /* transcationTableViewCell.swift */,
+				156D1E822250214200B09632 /* transcationTableViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -479,14 +491,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				156D1E7D224FFC3100B09632 /* editProfileViewController.swift in Sources */,
 				15A2BC342234A0F200ED5263 /* TabBarSubViewsViewController.swift in Sources */,
 				159750D1222B3DEA006427BA /* CustomNavigationBarViewController.swift in Sources */,
 				159750CA222B252E006427BA /* CustomTextField.swift in Sources */,
+				156D1E832250214200B09632 /* transcationTableViewController.swift in Sources */,
 				15211941223DF3D60015409B /* FriendsTableViewCell.swift in Sources */,
 				1564AFBF2221E68C00A5B52B /* loginPageViewController.swift in Sources */,
 				159750CF222B34D3006427BA /* utilFactory.swift in Sources */,
 				15A2BC362234A4E500ED5263 /* CustomTabBarControllerViewController.swift in Sources */,
 				1564AFF1222204B200A5B52B /* ContactListViewController.swift in Sources */,
+				156D1E8122501F6C00B09632 /* transcationTableViewCell.swift in Sources */,
+				156D1E7F2250023B00B09632 /* editProfileTableViewCell.swift in Sources */,
 				1564AFED2221FD4C00A5B52B /* NetworkService.swift in Sources */,
 				1521193F223DDE210015409B /* RegisterPageViewController.swift in Sources */,
 				15D6FC392247268300FA6E74 /* WeightTableViewCell.swift in Sources */,
