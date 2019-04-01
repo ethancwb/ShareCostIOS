@@ -8,22 +8,25 @@
 
 import UIKit
 
-class transcationTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class transcationTableViewController: TabBarSubViewsViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var transcationTable: UITableView!
-    @IBOutlet weak var avatarButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupAvatarView()
+        self.navigationItem.largeTitleDisplayMode = .never
         transcationTable.delegate = self
         transcationTable.dataSource = self
     }
-
-    func setupAvatarView() {
-        avatarButton.layer.cornerRadius = avatarButton.bounds.size.width / 2
-        avatarButton.clipsToBounds = true
-        avatarButton.setImage(UIImage(named:"avatar_icon_placeholder"), for: .normal)
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.isHidden = false
+        self.navigationItem.title = "All Transcations"
+        if let navcontroller = self.navigationController as? CustomNavigationBarViewController {
+            navcontroller.setupNormal()
+            self.setupNavigationBar()
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

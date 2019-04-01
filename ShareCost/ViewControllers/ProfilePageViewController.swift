@@ -29,7 +29,6 @@ class ProfilePageViewController: UIViewController, UITableViewDelegate, UITableV
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.navigationBar.isHidden = true
         self.setupAvatarView()
         self.profileSettingTable.dataSource = self
         self.profileSettingTable.delegate = self
@@ -47,6 +46,7 @@ class ProfilePageViewController: UIViewController, UITableViewDelegate, UITableV
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.isHidden = true
         super.viewWillAppear(animated)
     }
     

@@ -68,7 +68,6 @@ class ContactListViewController: TabBarSubViewsViewController, UITableViewDelega
     func setupModalView() {
         let leftButton = UIBarButtonItem.init(barButtonSystemItem: .cancel, target: self, action: #selector(pressedCancel))
         let rightButton = UIBarButtonItem.init(barButtonSystemItem: .done, target: self, action: #selector(pressedDone))
-        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         self.navigationItem.leftBarButtonItem = leftButton
         self.navigationItem.rightBarButtonItem = rightButton
     }

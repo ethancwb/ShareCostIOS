@@ -334,35 +334,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tGL-Xe-NSr">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="260"/>
-                                <subviews>
-                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OlN-Id-px6" userLabel="Avatar">
-                                        <rect key="frame" x="147" y="90" width="120" height="120"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="120" id="dxU-GW-Mnw"/>
-                                            <constraint firstAttribute="height" constant="120" id="ie6-qW-LnN"/>
-                                        </constraints>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" red="0.56646156309999995" green="0.74844294789999999" blue="0.77647775409999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <constraints>
-                                    <constraint firstItem="OlN-Id-px6" firstAttribute="centerY" secondItem="tGL-Xe-NSr" secondAttribute="centerY" constant="20" id="0Zt-yi-d48"/>
-                                    <constraint firstItem="OlN-Id-px6" firstAttribute="centerX" secondItem="tGL-Xe-NSr" secondAttribute="centerX" id="7Hg-J2-kBl"/>
-                                    <constraint firstAttribute="height" constant="260" id="iPB-Tp-dba"/>
-                                </constraints>
-                            </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="43a-ff-Gbf" userLabel="bill table view">
-                                <rect key="frame" x="0.0" y="258" width="414" height="555"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="170" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="43a-ff-Gbf" userLabel="bill table view">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="transcationCell" rowHeight="200" id="Utz-zQ-cNh" customClass="transcationTableViewCell" customModule="ShareCost" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="200"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="transcationCell" rowHeight="170" id="Utz-zQ-cNh" customClass="transcationTableViewCell" customModule="ShareCost" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="170"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Utz-zQ-cNh" id="y1e-UK-aSv">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="199.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="169.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Transcation ID: 12345678" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rlY-IN-UM7">
@@ -440,14 +420,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="tGL-Xe-NSr" firstAttribute="leading" secondItem="Bd2-FI-q3y" secondAttribute="leading" id="JXN-QI-U54"/>
-                            <constraint firstItem="s1L-Ce-HhC" firstAttribute="trailing" secondItem="tGL-Xe-NSr" secondAttribute="trailing" id="cjV-2g-p79"/>
-                            <constraint firstItem="tGL-Xe-NSr" firstAttribute="top" secondItem="Bd2-FI-q3y" secondAttribute="top" id="kle-mL-wbX"/>
+                            <constraint firstItem="43a-ff-Gbf" firstAttribute="bottom" secondItem="s1L-Ce-HhC" secondAttribute="bottom" id="5MJ-tl-U4b"/>
+                            <constraint firstItem="43a-ff-Gbf" firstAttribute="leading" secondItem="s1L-Ce-HhC" secondAttribute="leading" id="cW9-IA-JAr"/>
+                            <constraint firstItem="43a-ff-Gbf" firstAttribute="top" secondItem="s1L-Ce-HhC" secondAttribute="top" id="iCR-14-MWi"/>
+                            <constraint firstItem="43a-ff-Gbf" firstAttribute="trailing" secondItem="s1L-Ce-HhC" secondAttribute="trailing" id="ndp-58-1zA"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="s1L-Ce-HhC"/>
                     </view>
                     <connections>
-                        <outlet property="avatarButton" destination="OlN-Id-px6" id="iz2-Qw-slt"/>
                         <outlet property="transcationTable" destination="43a-ff-Gbf" id="xXh-SJ-UT9"/>
                     </connections>
                 </viewController>

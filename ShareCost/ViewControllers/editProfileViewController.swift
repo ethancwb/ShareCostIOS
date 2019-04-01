@@ -19,18 +19,16 @@ class editProfileViewController: UIViewController, UITableViewDelegate, UITableV
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.largeTitleDisplayMode = .never
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage.init(), for: UIBarMetrics.default)
-        self.navigationController?.navigationBar.shadowImage = UIImage.init()
-        self.navigationController?.navigationBar.isTranslucent = true
-        self.navigationController?.view.backgroundColor = UIColor.clear
-        self.navigationController?.navigationBar.backgroundColor = UIColor.clear
-        self.navigationController?.navigationBar.isHidden = false
         userInfoTable.delegate = self
         userInfoTable.dataSource = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.isHidden = false
+        if let navcontroller = self.navigationController as? CustomNavigationBarViewController {
+            navcontroller.setupTranslucent()
+        }
         setupAvatarView()
     }
     

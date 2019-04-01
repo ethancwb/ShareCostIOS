@@ -16,9 +16,6 @@ class TabBarSubViewsViewController: UIViewController, UISearchResultsUpdating, U
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        let backgroundImage = addBackground()
-//        self.view.addSubview(backgroundImage)
-//        self.view.sendSubviewToBack(backgroundImage)
         self.setupNavigationBar()
     }
     
