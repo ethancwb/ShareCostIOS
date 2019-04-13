@@ -22,6 +22,10 @@ class RegisterPageViewController: UIViewController {
         self.view.sendSubviewToBack(backgroundImage)
     }
     
+    @IBAction func onCancel(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+    }
+    
     @IBAction func onRegister(_ sender: Any) {
         if let username = usernameField.text,
             let password = passwordField.text,

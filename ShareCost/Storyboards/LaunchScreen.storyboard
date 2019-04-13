@@ -49,6 +49,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="login_image" width="4000" height="6000"/>
+        <image name="login_image" width="1920" height="1440"/>
     </resources>
 </document>

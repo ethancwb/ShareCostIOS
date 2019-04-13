@@ -15,17 +15,22 @@ class ProfilePageViewController: UIViewController, UITableViewDelegate, UITableV
     @IBOutlet weak var profileSettingTable: UITableView!
     @IBOutlet weak var userBalanceField: UITextView!
     @IBOutlet weak var usernameField: UITextView!
+    
     var profileSettings : [String] = [
         "My Profile",
         "All Transactions",
         "Friend Requests",
         "Contact Us"
     ]
+    
     var logoutSettings : [String] = [
         "Logout",
         "Delete Account"
     ]
-    var profileSegues : [String] = ["editProfile", "transcations"]
+    
+    var profileSegues : [String] = ["editProfile", "transcations", "newFriends", "contactus"]
+    
+    var logoutSegues = ["logout", "logout"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -88,8 +93,14 @@ class ProfilePageViewController: UIViewController, UITableViewDelegate, UITableV
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        self.performSegue(withIdentifier: profileSegues[indexPath.item], sender: nil)
+        let listSegues = tableView == profileSettingTable ? profileSegues : logoutSegues
+        self.performSegue(withIdentifier: listSegues[indexPath.item], sender: nil)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "logout" {
+            self.hidesBottomBarWhenPushed = true
+        }
+    }
     
 }

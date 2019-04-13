@@ -30,6 +30,10 @@
 		159750D7222B4947006427BA /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 159750D6222B4947006427BA /* LaunchScreenViewController.swift */; };
 		15A2BC342234A0F200ED5263 /* TabBarSubViewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A2BC332234A0F200ED5263 /* TabBarSubViewsViewController.swift */; };
 		15A2BC362234A4E500ED5263 /* CustomTabBarControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A2BC352234A4E500ED5263 /* CustomTabBarControllerViewController.swift */; };
+		15AD47552262610300832422 /* ContactUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15AD47542262610300832422 /* ContactUsViewController.swift */; };
+		15AD475722626D1300832422 /* FriendRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15AD475622626D1300832422 /* FriendRequestViewController.swift */; };
+		15AD475922626E7C00832422 /* NewFriendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15AD475822626E7C00832422 /* NewFriendTableViewCell.swift */; };
+		15AD475B22627AD700832422 /* CustomCellButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15AD475A22627AD700832422 /* CustomCellButton.swift */; };
 		15D6FC372247215000FA6E74 /* SplitWeightVIewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D6FC362247215000FA6E74 /* SplitWeightVIewController.swift */; };
 		15D6FC392247268300FA6E74 /* WeightTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D6FC382247268300FA6E74 /* WeightTableViewCell.swift */; };
 		D08D9B0C190E210970773EB3 /* Pods_ShareCost.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CA4265CCCB5DA20817EF2F1 /* Pods_ShareCost.framework */; };
@@ -84,6 +88,10 @@
 		159750D6222B4947006427BA /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
 		15A2BC332234A0F200ED5263 /* TabBarSubViewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarSubViewsViewController.swift; sourceTree = "<group>"; };
 		15A2BC352234A4E500ED5263 /* CustomTabBarControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarControllerViewController.swift; sourceTree = "<group>"; };
+		15AD47542262610300832422 /* ContactUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUsViewController.swift; sourceTree = "<group>"; };
+		15AD475622626D1300832422 /* FriendRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendRequestViewController.swift; sourceTree = "<group>"; };
+		15AD475822626E7C00832422 /* NewFriendTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewFriendTableViewCell.swift; sourceTree = "<group>"; };
+		15AD475A22627AD700832422 /* CustomCellButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCellButton.swift; sourceTree = "<group>"; };
 		15D6FC362247215000FA6E74 /* SplitWeightVIewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitWeightVIewController.swift; sourceTree = "<group>"; };
 		15D6FC382247268300FA6E74 /* WeightTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightTableViewCell.swift; sourceTree = "<group>"; };
 		1CA4265CCCB5DA20817EF2F1 /* Pods_ShareCost.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShareCost.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -191,12 +199,15 @@
 		159750C8222B24F5006427BA /* Subclasses */ = {
 			isa = PBXGroup;
 			children = (
+				156D1E8022501F6C00B09632 /* transcationTableViewCell.swift */,
 				159750C9222B252E006427BA /* CustomTextField.swift */,
 				159750D0222B3DEA006427BA /* CustomNavigationBarViewController.swift */,
 				15A2BC352234A4E500ED5263 /* CustomTabBarControllerViewController.swift */,
 				15211940223DF3D60015409B /* FriendsTableViewCell.swift */,
 				15D6FC382247268300FA6E74 /* WeightTableViewCell.swift */,
 				156D1E7E2250023B00B09632 /* editProfileTableViewCell.swift */,
+				15AD475822626E7C00832422 /* NewFriendTableViewCell.swift */,
+				15AD475A22627AD700832422 /* CustomCellButton.swift */,
 			);
 			path = Subclasses;
 			sourceTree = "<group>";
@@ -204,6 +215,7 @@
 		159750CB222B346C006427BA /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				15AD4753226260AF00832422 /* SubProfilePages */,
 				1564AFBE2221E68C00A5B52B /* loginPageViewController.swift */,
 				1564AFEE2222032800A5B52B /* ProfilePageViewController.swift */,
 				1564AFF0222204B200A5B52B /* ContactListViewController.swift */,
@@ -212,9 +224,6 @@
 				15A2BC332234A0F200ED5263 /* TabBarSubViewsViewController.swift */,
 				1521193E223DDE210015409B /* RegisterPageViewController.swift */,
 				15D6FC362247215000FA6E74 /* SplitWeightVIewController.swift */,
-				156D1E7C224FFC3100B09632 /* editProfileViewController.swift */,
-				156D1E8022501F6C00B09632 /* transcationTableViewCell.swift */,
-				156D1E822250214200B09632 /* transcationTableViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -234,6 +243,17 @@
 				159750CE222B34D3006427BA /* utilFactory.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		15AD4753226260AF00832422 /* SubProfilePages */ = {
+			isa = PBXGroup;
+			children = (
+				156D1E7C224FFC3100B09632 /* editProfileViewController.swift */,
+				156D1E822250214200B09632 /* transcationTableViewController.swift */,
+				15AD47542262610300832422 /* ContactUsViewController.swift */,
+				15AD475622626D1300832422 /* FriendRequestViewController.swift */,
+			);
+			path = SubProfilePages;
 			sourceTree = "<group>";
 		};
 		AC8C85A5C4B15D346F43A1F1 /* Frameworks */ = {
@@ -493,9 +513,13 @@
 			files = (
 				156D1E7D224FFC3100B09632 /* editProfileViewController.swift in Sources */,
 				15A2BC342234A0F200ED5263 /* TabBarSubViewsViewController.swift in Sources */,
+				15AD47552262610300832422 /* ContactUsViewController.swift in Sources */,
+				15AD475922626E7C00832422 /* NewFriendTableViewCell.swift in Sources */,
 				159750D1222B3DEA006427BA /* CustomNavigationBarViewController.swift in Sources */,
+				15AD475722626D1300832422 /* FriendRequestViewController.swift in Sources */,
 				159750CA222B252E006427BA /* CustomTextField.swift in Sources */,
 				156D1E832250214200B09632 /* transcationTableViewController.swift in Sources */,
+				15AD475B22627AD700832422 /* CustomCellButton.swift in Sources */,
 				15211941223DF3D60015409B /* FriendsTableViewCell.swift in Sources */,
 				1564AFBF2221E68C00A5B52B /* loginPageViewController.swift in Sources */,
 				159750CF222B34D3006427BA /* utilFactory.swift in Sources */,

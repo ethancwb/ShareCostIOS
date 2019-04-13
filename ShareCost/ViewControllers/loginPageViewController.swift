@@ -56,5 +56,11 @@ class loginPageViewController: UIViewController {
 ////            self.performSegue(withIdentifier: "userLoginSegue", sender: nil)
 //        }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "userLoginSegue" {
+            navigationController?.viewControllers = []
+        }
+    }
 }
 
