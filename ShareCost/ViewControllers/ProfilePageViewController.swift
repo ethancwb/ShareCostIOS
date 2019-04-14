@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ProfilePageViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ProfilePageViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     @IBOutlet weak var logoutSettingsTable: UITableView!
     @IBOutlet weak var avatarButton: UIButton!
@@ -31,6 +31,8 @@ class ProfilePageViewController: UIViewController, UITableViewDelegate, UITableV
     var profileSegues : [String] = ["editProfile", "transcations", "newFriends", "contactus"]
     
     var logoutSegues = ["logout", "logout"]
+    
+    var avatarImage = UIImage(named:"avatar_icon_placeholder")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,11 +60,23 @@ class ProfilePageViewController: UIViewController, UITableViewDelegate, UITableV
     func setupAvatarView() {
         avatarButton.layer.cornerRadius = avatarButton.bounds.size.width / 2
         avatarButton.clipsToBounds = true
-        avatarButton.setImage(UIImage(named:"avatar_icon_placeholder"), for: .normal)
+        avatarButton.setImage(avatarImage, for: .normal)
     }
     
     @IBAction func onAvatarClicked(_ sender: Any) {
-        
+        let myPickerController = UIImagePickerController()
+        myPickerController.delegate = self;
+        myPickerController.sourceType = UIImagePickerController.SourceType.photoLibrary
+        self.present(myPickerController, animated: true, completion: nil)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        let image_data = info[UIImagePickerController.InfoKey.originalImage] as? UIImage
+//        let imageData:Data = image_data!.pngData()!
+//        let imageStr = imageData.base64EncodedString()
+        self.avatarImage = image_data
+        setupAvatarView()
+        self.dismiss(animated: true, completion: nil)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
