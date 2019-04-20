@@ -23,6 +23,8 @@
 		156D1E7F2250023B00B09632 /* editProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156D1E7E2250023B00B09632 /* editProfileTableViewCell.swift */; };
 		156D1E8122501F6C00B09632 /* transcationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156D1E8022501F6C00B09632 /* transcationTableViewCell.swift */; };
 		156D1E832250214200B09632 /* transcationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156D1E822250214200B09632 /* transcationTableViewController.swift */; };
+		157E329C226BAD8A0050CA06 /* userModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157E329B226BAD8A0050CA06 /* userModel.swift */; };
+		157E329E226BAD970050CA06 /* transcationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157E329D226BAD970050CA06 /* transcationModel.swift */; };
 		159750CA222B252E006427BA /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 159750C9222B252E006427BA /* CustomTextField.swift */; };
 		159750CF222B34D3006427BA /* utilFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 159750CE222B34D3006427BA /* utilFactory.swift */; };
 		159750D1222B3DEA006427BA /* CustomNavigationBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 159750D0222B3DEA006427BA /* CustomNavigationBarViewController.swift */; };
@@ -81,6 +83,8 @@
 		156D1E7E2250023B00B09632 /* editProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = editProfileTableViewCell.swift; sourceTree = "<group>"; };
 		156D1E8022501F6C00B09632 /* transcationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = transcationTableViewCell.swift; sourceTree = "<group>"; };
 		156D1E822250214200B09632 /* transcationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = transcationTableViewController.swift; sourceTree = "<group>"; };
+		157E329B226BAD8A0050CA06 /* userModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userModel.swift; sourceTree = "<group>"; };
+		157E329D226BAD970050CA06 /* transcationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = transcationModel.swift; sourceTree = "<group>"; };
 		159750C9222B252E006427BA /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		159750CE222B34D3006427BA /* utilFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = utilFactory.swift; sourceTree = "<group>"; };
 		159750D0222B3DEA006427BA /* CustomNavigationBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationBarViewController.swift; sourceTree = "<group>"; };
@@ -158,6 +162,7 @@
 		1564AFBB2221E68C00A5B52B /* ShareCost */ = {
 			isa = PBXGroup;
 			children = (
+				157E329A226BACCC0050CA06 /* Model */,
 				159750CD222B34A0006427BA /* Utils */,
 				159750CC222B348E006427BA /* Storyboards */,
 				159750CB222B346C006427BA /* ViewControllers */,
@@ -194,6 +199,15 @@
 				1564AFEC2221FD4C00A5B52B /* NetworkService.swift */,
 			);
 			path = NetworkFiles;
+			sourceTree = "<group>";
+		};
+		157E329A226BACCC0050CA06 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				157E329B226BAD8A0050CA06 /* userModel.swift */,
+				157E329D226BAD970050CA06 /* transcationModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		159750C8222B24F5006427BA /* Subclasses */ = {
@@ -533,6 +547,8 @@
 				1564AFBD2221E68C00A5B52B /* AppDelegate.swift in Sources */,
 				1564AFF3222207F300A5B52B /* CalculatorViewController.swift in Sources */,
 				15D6FC372247215000FA6E74 /* SplitWeightVIewController.swift in Sources */,
+				157E329E226BAD970050CA06 /* transcationModel.swift in Sources */,
+				157E329C226BAD8A0050CA06 /* userModel.swift in Sources */,
 				159750D7222B4947006427BA /* LaunchScreenViewController.swift in Sources */,
 				1564AFEF2222032800A5B52B /* ProfilePageViewController.swift in Sources */,
 			);
