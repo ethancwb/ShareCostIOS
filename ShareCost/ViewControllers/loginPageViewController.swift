@@ -41,6 +41,7 @@ class loginPageViewController: UIViewController {
 //            self.passwordField
 //        }
 //    }
+    
     @IBAction func onRegisterPressed(_ sender: Any) {
         self.activityIndicator.isHidden = false
         self.performSegue(withIdentifier: "registerSegue", sender: nil)
@@ -48,13 +49,17 @@ class loginPageViewController: UIViewController {
     
     @IBAction func onLoginPressed(_ sender: Any) {
         self.activityIndicator.isHidden = false
-        self.performSegue(withIdentifier: "userLoginSegue", sender: nil)
+//        self.performSegue(withIdentifier: "userLoginSegue", sender: nil)
 
-//        let username = "test"
-//        let password = "test"
-//        sendLoginInfo(username: username, password: password) { response in
-////            self.performSegue(withIdentifier: "userLoginSegue", sender: nil)
-//        }
+        if let username = usernameField.text,
+            let password = passwordField.text {
+            getLoginFromString() { hello in
+                let a = hello
+            }
+            sendLoginInfo(username: username, password: password) { response in
+                self.performSegue(withIdentifier: "userLoginSegue", sender: nil)
+            }
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
