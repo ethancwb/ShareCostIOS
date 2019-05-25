@@ -37,7 +37,10 @@ class RegisterPageViewController: UIViewController {
             }
             if password == rePassword {
                 registerNewUser(username: username, password: password) { response in
-                    self.performSegue(withIdentifier: "loginAfterRegisterSegue", sender: nil)
+                    if let user = response {
+                        userSession.shared.setCurrentUser(user: user)
+                        self.performSegue(withIdentifier: "loginAfterRegisterSegue", sender: nil)
+                    }
                 }
             } else {
                 let alert = UIAlertController(title: "Password Error", message: "Password didn't match", preferredStyle: .alert)

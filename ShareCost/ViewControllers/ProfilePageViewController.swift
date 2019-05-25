@@ -34,6 +34,8 @@ class ProfilePageViewController: UIViewController, UITableViewDelegate, UITableV
     
     var avatarImage = UIImage(named:"avatar_icon_placeholder")
     
+    var currentUser : User?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupAvatarView()
@@ -53,8 +55,16 @@ class ProfilePageViewController: UIViewController, UITableViewDelegate, UITableV
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.navigationBar.isHidden = true
         super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.isHidden = true
+        self.setupUserInfo()
+    }
+    
+    func setupUserInfo() {
+        if let user = userSession.shared.getCurrentUser() {
+            currentUser = user
+            usernameField.text = "Username: \(currentUser?.username ?? "")"
+        }
     }
     
     func setupAvatarView() {

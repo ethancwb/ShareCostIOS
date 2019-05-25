@@ -247,7 +247,7 @@
                                             <action selector="onAvatarClicked:" destination="oED-Uh-GPo" eventType="touchUpInside" id="UKu-6z-LOD"/>
                                         </connections>
                                     </button>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Username" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="83T-SG-4bE" userLabel="Username">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Username:" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="83T-SG-4bE" userLabel="Username">
                                         <rect key="frame" x="80" y="234" width="254" height="25"/>
                                         <color key="backgroundColor" red="0.56646156309999995" green="0.74844294789999999" blue="0.77647775409999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -266,7 +266,7 @@
                                             <constraint firstAttribute="height" constant="25" id="48P-jz-15A"/>
                                         </constraints>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                 </subviews>
@@ -466,7 +466,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="maH-sN-3Nv">
-                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="newFriendCell" rowHeight="80" id="tGX-qx-0YS" customClass="NewFriendTableViewCell" customModule="ShareCost" customModuleProvider="target">
@@ -654,6 +654,11 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2E5-E3-FAo" userLabel="FriendList">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="cwl-rw-OJ9">
+                                    <rect key="frame" x="0.0" y="108" width="414" height="128"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FriendCell" rowHeight="80" id="KbE-6k-MqZ" userLabel="FriendCell" customClass="FriendsTableViewCell" customModule="ShareCost" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="80"/>
@@ -1074,7 +1079,12 @@
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xWS-GD-Of5" userLabel="User Info Table">
                                 <rect key="frame" x="0.0" y="260" width="414" height="553"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="Lbb-lz-adj">
+                                    <rect key="frame" x="0.0" y="72" width="414" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="gray" indentationWidth="10" reuseIdentifier="profileCell" rowHeight="44" id="bXP-yO-l4N" customClass="editProfileTableViewCell" customModule="ShareCost" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="44"/>
@@ -1083,8 +1093,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="qGc-Wd-uK9" userLabel="input">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="qGc-Wd-uK9" userLabel="input">
                                                     <rect key="frame" x="25" y="0.0" width="364" height="43.5"/>
+                                                    <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
@@ -1104,13 +1115,12 @@
                                 </prototypes>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="0.90000000000000002" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="fUh-7c-Ebn" firstAttribute="bottom" secondItem="xWS-GD-Of5" secondAttribute="bottom" id="9ZZ-RN-oOw"/>
                             <constraint firstItem="sq3-mW-85M" firstAttribute="leading" secondItem="fUh-7c-Ebn" secondAttribute="leading" id="WB0-y0-DjK"/>
                             <constraint firstItem="xWS-GD-Of5" firstAttribute="leading" secondItem="fUh-7c-Ebn" secondAttribute="leading" id="hWJ-SV-hxD"/>
                             <constraint firstItem="sq3-mW-85M" firstAttribute="trailing" secondItem="fUh-7c-Ebn" secondAttribute="trailing" id="o69-1p-lrT"/>
                             <constraint firstItem="sq3-mW-85M" firstAttribute="top" secondItem="G9a-fl-GZS" secondAttribute="top" id="sHq-YT-SKp"/>
+                            <constraint firstItem="fUh-7c-Ebn" firstAttribute="bottom" secondItem="xWS-GD-Of5" secondAttribute="bottom" id="t7D-KZ-oGr"/>
                             <constraint firstItem="xWS-GD-Of5" firstAttribute="trailing" secondItem="fUh-7c-Ebn" secondAttribute="trailing" id="tur-IS-ADe"/>
                             <constraint firstItem="xWS-GD-Of5" firstAttribute="top" secondItem="sq3-mW-85M" secondAttribute="bottom" id="vRX-xB-MqG"/>
                         </constraints>

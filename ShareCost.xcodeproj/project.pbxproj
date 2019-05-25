@@ -36,6 +36,7 @@
 		15AD475722626D1300832422 /* FriendRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15AD475622626D1300832422 /* FriendRequestViewController.swift */; };
 		15AD475922626E7C00832422 /* NewFriendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15AD475822626E7C00832422 /* NewFriendTableViewCell.swift */; };
 		15AD475B22627AD700832422 /* CustomCellButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15AD475A22627AD700832422 /* CustomCellButton.swift */; };
+		15B60E532274FDEC004B39A1 /* userSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B60E522274FDEC004B39A1 /* userSession.swift */; };
 		15D6FC372247215000FA6E74 /* SplitWeightVIewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D6FC362247215000FA6E74 /* SplitWeightVIewController.swift */; };
 		15D6FC392247268300FA6E74 /* WeightTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D6FC382247268300FA6E74 /* WeightTableViewCell.swift */; };
 		D08D9B0C190E210970773EB3 /* Pods_ShareCost.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CA4265CCCB5DA20817EF2F1 /* Pods_ShareCost.framework */; };
@@ -96,6 +97,7 @@
 		15AD475622626D1300832422 /* FriendRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendRequestViewController.swift; sourceTree = "<group>"; };
 		15AD475822626E7C00832422 /* NewFriendTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewFriendTableViewCell.swift; sourceTree = "<group>"; };
 		15AD475A22627AD700832422 /* CustomCellButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCellButton.swift; sourceTree = "<group>"; };
+		15B60E522274FDEC004B39A1 /* userSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userSession.swift; sourceTree = "<group>"; };
 		15D6FC362247215000FA6E74 /* SplitWeightVIewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitWeightVIewController.swift; sourceTree = "<group>"; };
 		15D6FC382247268300FA6E74 /* WeightTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightTableViewCell.swift; sourceTree = "<group>"; };
 		1CA4265CCCB5DA20817EF2F1 /* Pods_ShareCost.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShareCost.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -162,6 +164,7 @@
 		1564AFBB2221E68C00A5B52B /* ShareCost */ = {
 			isa = PBXGroup;
 			children = (
+				15B60E512274FDC4004B39A1 /* UserSession */,
 				157E329A226BACCC0050CA06 /* Model */,
 				159750CD222B34A0006427BA /* Utils */,
 				159750CC222B348E006427BA /* Storyboards */,
@@ -268,6 +271,14 @@
 				15AD475622626D1300832422 /* FriendRequestViewController.swift */,
 			);
 			path = SubProfilePages;
+			sourceTree = "<group>";
+		};
+		15B60E512274FDC4004B39A1 /* UserSession */ = {
+			isa = PBXGroup;
+			children = (
+				15B60E522274FDEC004B39A1 /* userSession.swift */,
+			);
+			path = UserSession;
 			sourceTree = "<group>";
 		};
 		AC8C85A5C4B15D346F43A1F1 /* Frameworks */ = {
@@ -547,6 +558,7 @@
 				1564AFBD2221E68C00A5B52B /* AppDelegate.swift in Sources */,
 				1564AFF3222207F300A5B52B /* CalculatorViewController.swift in Sources */,
 				15D6FC372247215000FA6E74 /* SplitWeightVIewController.swift in Sources */,
+				15B60E532274FDEC004B39A1 /* userSession.swift in Sources */,
 				157E329E226BAD970050CA06 /* transcationModel.swift in Sources */,
 				157E329C226BAD8A0050CA06 /* userModel.swift in Sources */,
 				159750D7222B4947006427BA /* LaunchScreenViewController.swift in Sources */,

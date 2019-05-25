@@ -30,18 +30,6 @@ class loginPageViewController: UIViewController {
         self.navigationController?.navigationBar.isHidden = true
     }
     
-//    @IBAction func sendrequest(_ sender: Any) {
-//        getLoginFromString() { response in
-//            self.navigationItem.title = response
-//        }
-//    }
-    
-//    @IBAction func passwordChanged(_ sender: Any) {
-//        if (self.passwordField.text?.count > 0) {
-//            self.passwordField
-//        }
-//    }
-    
     @IBAction func onRegisterPressed(_ sender: Any) {
         self.activityIndicator.isHidden = false
         self.performSegue(withIdentifier: "registerSegue", sender: nil)
@@ -49,15 +37,13 @@ class loginPageViewController: UIViewController {
     
     @IBAction func onLoginPressed(_ sender: Any) {
         self.activityIndicator.isHidden = false
-//        self.performSegue(withIdentifier: "userLoginSegue", sender: nil)
-
         if let username = usernameField.text,
             let password = passwordField.text {
-            getLoginFromString() { hello in
-                let a = hello
-            }
             sendLoginInfo(username: username, password: password) { response in
-                self.performSegue(withIdentifier: "userLoginSegue", sender: nil)
+                if let user = response {
+                    userSession.shared.setCurrentUser(user: user)
+                    self.performSegue(withIdentifier: "userLoginSegue", sender: nil)
+                }
             }
         }
     }

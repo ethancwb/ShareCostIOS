@@ -13,6 +13,7 @@ class User {
     // Required fields
     var username: String
     var password: String
+    var identifier: String
     // Optional fields
     var firstName: String?
     var lastName: String?
@@ -23,9 +24,10 @@ class User {
     var showemail: Bool?
     var showphonenumber: Bool?
 
-    init(username: String, password: String) {
+    init(username: String, password: String, identifier: String) {
         self.username = username
         self.password = password
+        self.identifier = identifier
     }
     
     public func setFirstName(firstName: String) {
