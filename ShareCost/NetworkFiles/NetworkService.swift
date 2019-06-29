@@ -16,33 +16,25 @@ func sendPostRequest(params: [String : String]) {
     
 }
 
-func getLoginFromString(completionBlock: @escaping (String?) -> Void) {
-    Alamofire.request("\(API_ROUTE)/test/get").responseJSON { response in
-        if let JSON = response.result.value {
-            print("JSON: \(JSON)")
-            if let resultDict = JSON as? NSDictionary {
-                if let resultString = resultDict["test"] as? String {
-                    completionBlock(resultString)
-                }
-            }
-        }
-    }
-}
-
-func sendLoginInfo(username: String, password: String, completionBlock: @escaping (User?) -> Void) {
+func sendLoginInfo(username: String, password: String, completionBlock: @escaping (User?) -> Void, errorBlock: @escaping () -> Void) {
     Alamofire.request("\(API_ROUTE)/user/userlogin", method: .post,
                       parameters: ["username": username,
                                    "password": password],
                       encoding: JSONEncoding.default, headers: nil).validate().responseJSON { response in
-        if let userJson = response.result.value as? [String : Any] {
-            if let username = userJson["username"] as? String,
-                let password = userJson["password"] as? String,
-                let id = userJson["id"] as? String {
-                let user = User.init(username: username, password: password, identifier: id)
-                completionBlock(user)
-            }
-        }
-    }
+                        switch response.result {
+                        case .success(let data):
+                            if let userJson = response.result.value as? [String : Any] {
+                                if let username = userJson["username"] as? String,
+                                    let password = userJson["password"] as? String,
+                                    let id = userJson["id"] as? String {
+                                    let user = User.init(username: username, password: password, identifier: id)
+                                    completionBlock(user)
+                                }
+                            }
+                        case .failure(let error):
+                            errorBlock()
+                        }
+                    }
 }
 
 func registerNewUser(username: String, password: String, completionBlock: @escaping (User?) -> Void) {
@@ -64,5 +56,33 @@ func registerNewUser(username: String, password: String, completionBlock: @escap
                 print("fail to login")
             }
         }
+    }
+}
+
+func getUserFriendList(userId: String, successBlock: @escaping ([User]) -> Void) {
+    Alamofire.request("\(API_ROUTE)/friend/get", method: .post,
+                      parameters: ["from": userId],
+                      encoding: JSONEncoding.default, headers: nil).validate().responseJSON { response in
+                        switch response.result {
+                        case .success(let data):
+                            if let userJson = response.result.value as? [String : Any] {
+                                let arr = userJson
+                            }
+                        case .failure(let err):
+                            print("get list failed")
+                        }
+    }
+}
+
+func addUser(userId: String, requestName: String, successBlock: @escaping () -> Void) {
+    Alamofire.request("\(API_ROUTE)/friend/request", method: .post,
+                      parameters: ["from": userId,
+                                   "to": requestName],
+                      encoding: JSONEncoding.default, headers: nil).validate().responseJSON { response in
+                        if let statusCode = response.response?.statusCode {
+                            if statusCode <= 300 {
+                                successBlock()
+                            }
+                        }
     }
 }

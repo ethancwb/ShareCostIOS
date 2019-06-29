@@ -39,12 +39,24 @@ class loginPageViewController: UIViewController {
         self.activityIndicator.isHidden = false
         if let username = usernameField.text,
             let password = passwordField.text {
-            sendLoginInfo(username: username, password: password) { response in
+            let successBlock : (User?) -> Void = { response in
                 if let user = response {
                     userSession.shared.setCurrentUser(user: user)
                     self.performSegue(withIdentifier: "userLoginSegue", sender: nil)
+                } else {
+                    self.activityIndicator.isHidden = true;
+                    let alert = UIAlertController(title: "Login Error", message: "Username/Password mismatch", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "Cancel", style: .default, handler: nil))
+                    self.present(alert, animated: true)
                 }
             }
+            let failBlock = {
+                self.activityIndicator.isHidden = true
+                let alert = UIAlertController(title: "Login Error", message: "Username/Password incorrect", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Cancel", style: .default, handler: nil))
+                self.present(alert, animated: true)
+            }
+            sendLoginInfo(username: username, password: password, completionBlock: successBlock, errorBlock: failBlock)
         }
     }
     

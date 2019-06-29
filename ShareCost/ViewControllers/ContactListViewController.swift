@@ -13,8 +13,9 @@ class ContactListViewController: TabBarSubViewsViewController, UITableViewDelega
     @IBOutlet weak var FriendList: UITableView!
     public var isModalMode : Bool = false
     public var delegate : CalculatorViewController?
+    @IBOutlet weak var addNewFriend: UIBarButtonItem!
     
-    var dummy_users = ["Paul", "Monica", "Lisa", "Bill", "Kevin", "Louise"]
+    var dummy_users : [String] = []
     var dummy_balance = ["-$30.0", "$52.5", "-$34.2", "$72.8", "$12.0", "-$24.0"]
     var status = ["balance", "owed", "owed", "owed", "balance", "balance"]
 
@@ -98,6 +99,13 @@ class ContactListViewController: TabBarSubViewsViewController, UITableViewDelega
             self.FriendList.allowsMultipleSelection = true
             self.FriendList.allowsSelectionDuringEditing = true
         }
+        let successBlock : ([User]) -> Void = { userList in
+            self.dummy_users = userList.map {$0.username}
+        }
+        getUserFriendList(userId: userSession.shared.currentUser?.identifier ?? "", successBlock: successBlock)
     }
     
+    @IBAction func addFriend(_ sender: Any) {
+        self.performSegue(withIdentifier: "addFriend", sender: nil)
+    }
 }

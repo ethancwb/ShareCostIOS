@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1521193F223DDE210015409B /* RegisterPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1521193E223DDE210015409B /* RegisterPageViewController.swift */; };
 		15211941223DF3D60015409B /* FriendsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15211940223DF3D60015409B /* FriendsTableViewCell.swift */; };
+		15262BF92299D2B5005ABC15 /* SearchFriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15262BF82299D2B5005ABC15 /* SearchFriendViewController.swift */; };
 		1564AFBD2221E68C00A5B52B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1564AFBC2221E68C00A5B52B /* AppDelegate.swift */; };
 		1564AFBF2221E68C00A5B52B /* loginPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1564AFBE2221E68C00A5B52B /* loginPageViewController.swift */; };
 		1564AFC22221E68C00A5B52B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1564AFC02221E68C00A5B52B /* Main.storyboard */; };
@@ -64,6 +65,7 @@
 /* Begin PBXFileReference section */
 		1521193E223DDE210015409B /* RegisterPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPageViewController.swift; sourceTree = "<group>"; };
 		15211940223DF3D60015409B /* FriendsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsTableViewCell.swift; sourceTree = "<group>"; };
+		15262BF82299D2B5005ABC15 /* SearchFriendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFriendViewController.swift; sourceTree = "<group>"; };
 		1564AFB92221E68C00A5B52B /* ShareCost.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShareCost.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1564AFBC2221E68C00A5B52B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1564AFBE2221E68C00A5B52B /* loginPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginPageViewController.swift; sourceTree = "<group>"; };
@@ -241,6 +243,7 @@
 				15A2BC332234A0F200ED5263 /* TabBarSubViewsViewController.swift */,
 				1521193E223DDE210015409B /* RegisterPageViewController.swift */,
 				15D6FC362247215000FA6E74 /* SplitWeightVIewController.swift */,
+				15262BF82299D2B5005ABC15 /* SearchFriendViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -552,6 +555,7 @@
 				1564AFF1222204B200A5B52B /* ContactListViewController.swift in Sources */,
 				156D1E8122501F6C00B09632 /* transcationTableViewCell.swift in Sources */,
 				156D1E7F2250023B00B09632 /* editProfileTableViewCell.swift in Sources */,
+				15262BF92299D2B5005ABC15 /* SearchFriendViewController.swift in Sources */,
 				1564AFED2221FD4C00A5B52B /* NetworkService.swift in Sources */,
 				1521193F223DDE210015409B /* RegisterPageViewController.swift in Sources */,
 				15D6FC392247268300FA6E74 /* WeightTableViewCell.swift in Sources */,
