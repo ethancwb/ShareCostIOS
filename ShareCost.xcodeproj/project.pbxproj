@@ -40,6 +40,8 @@
 		15B60E532274FDEC004B39A1 /* userSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B60E522274FDEC004B39A1 /* userSession.swift */; };
 		15D6FC372247215000FA6E74 /* SplitWeightVIewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D6FC362247215000FA6E74 /* SplitWeightVIewController.swift */; };
 		15D6FC392247268300FA6E74 /* WeightTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D6FC382247268300FA6E74 /* WeightTableViewCell.swift */; };
+		15F0483122D96C2000AFB8E3 /* EventListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15F0483022D96C2000AFB8E3 /* EventListViewController.swift */; };
+		15F0483322D97DE000AFB8E3 /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15F0483222D97DE000AFB8E3 /* EventTableViewCell.swift */; };
 		D08D9B0C190E210970773EB3 /* Pods_ShareCost.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CA4265CCCB5DA20817EF2F1 /* Pods_ShareCost.framework */; };
 		DD3C34C2C600A334E28C0823 /* Pods_ShareCostUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACC3DEF6B8A44131EE64EAEC /* Pods_ShareCostUITests.framework */; };
 		F45284A14904F85E0091E446 /* Pods_ShareCostTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F9C9F611E1E655CD5677745 /* Pods_ShareCostTests.framework */; };
@@ -102,6 +104,8 @@
 		15B60E522274FDEC004B39A1 /* userSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userSession.swift; sourceTree = "<group>"; };
 		15D6FC362247215000FA6E74 /* SplitWeightVIewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitWeightVIewController.swift; sourceTree = "<group>"; };
 		15D6FC382247268300FA6E74 /* WeightTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightTableViewCell.swift; sourceTree = "<group>"; };
+		15F0483022D96C2000AFB8E3 /* EventListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListViewController.swift; sourceTree = "<group>"; };
+		15F0483222D97DE000AFB8E3 /* EventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
 		1CA4265CCCB5DA20817EF2F1 /* Pods_ShareCost.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShareCost.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CDA5BD4D0A2A7E9EBC54791 /* Pods-ShareCostUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShareCostUITests.release.xcconfig"; path = "Target Support Files/Pods-ShareCostUITests/Pods-ShareCostUITests.release.xcconfig"; sourceTree = "<group>"; };
 		8E841F260C104A3ED856662E /* Pods-ShareCostUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShareCostUITests.debug.xcconfig"; path = "Target Support Files/Pods-ShareCostUITests/Pods-ShareCostUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -227,6 +231,7 @@
 				156D1E7E2250023B00B09632 /* editProfileTableViewCell.swift */,
 				15AD475822626E7C00832422 /* NewFriendTableViewCell.swift */,
 				15AD475A22627AD700832422 /* CustomCellButton.swift */,
+				15F0483222D97DE000AFB8E3 /* EventTableViewCell.swift */,
 			);
 			path = Subclasses;
 			sourceTree = "<group>";
@@ -244,6 +249,7 @@
 				1521193E223DDE210015409B /* RegisterPageViewController.swift */,
 				15D6FC362247215000FA6E74 /* SplitWeightVIewController.swift */,
 				15262BF82299D2B5005ABC15 /* SearchFriendViewController.swift */,
+				15F0483022D96C2000AFB8E3 /* EventListViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -549,6 +555,7 @@
 				156D1E832250214200B09632 /* transcationTableViewController.swift in Sources */,
 				15AD475B22627AD700832422 /* CustomCellButton.swift in Sources */,
 				15211941223DF3D60015409B /* FriendsTableViewCell.swift in Sources */,
+				15F0483122D96C2000AFB8E3 /* EventListViewController.swift in Sources */,
 				1564AFBF2221E68C00A5B52B /* loginPageViewController.swift in Sources */,
 				159750CF222B34D3006427BA /* utilFactory.swift in Sources */,
 				15A2BC362234A4E500ED5263 /* CustomTabBarControllerViewController.swift in Sources */,
@@ -556,6 +563,7 @@
 				156D1E8122501F6C00B09632 /* transcationTableViewCell.swift in Sources */,
 				156D1E7F2250023B00B09632 /* editProfileTableViewCell.swift in Sources */,
 				15262BF92299D2B5005ABC15 /* SearchFriendViewController.swift in Sources */,
+				15F0483322D97DE000AFB8E3 /* EventTableViewCell.swift in Sources */,
 				1564AFED2221FD4C00A5B52B /* NetworkService.swift in Sources */,
 				1521193F223DDE210015409B /* RegisterPageViewController.swift in Sources */,
 				15D6FC392247268300FA6E74 /* WeightTableViewCell.swift in Sources */,
