@@ -8,6 +8,7 @@
 
 import UIKit
 import Foundation
+import FirebaseAuth
 
 class loginPageViewController: UIViewController {
     
@@ -47,6 +48,7 @@ class loginPageViewController: UIViewController {
                     self.activityIndicator.isHidden = true;
                     let alert = UIAlertController(title: "Login Error", message: "Username/Password mismatch", preferredStyle: .alert)
                     alert.addAction(UIAlertAction(title: "Cancel", style: .default, handler: nil))
+                    Auth.auth().signInAnonymously(completion: nil)
                     self.present(alert, animated: true)
                 }
             }

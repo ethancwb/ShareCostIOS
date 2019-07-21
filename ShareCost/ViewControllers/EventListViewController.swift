@@ -29,7 +29,8 @@ class EventListViewController: UIViewController, UITableViewDelegate, UITableVie
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.title = ""
+        navigationItem.title = "My Events"
+        navigationItem.rightBarButtonItem = UIBarButtonItem.init(barButtonSystemItem: UIBarButtonItem.SystemItem.add, target: self, action: #selector(addNewEvent))
         setupAvatarView()
         eventTable.delegate = self
         eventTable.dataSource = self
@@ -41,11 +42,10 @@ class EventListViewController: UIViewController, UITableViewDelegate, UITableVie
         if let navcontroller = self.navigationController as? CustomNavigationBarViewController {
             navcontroller.setupTranslucent()
         }
-//        let px = 1 / UIScreen.main.scale
-//        let frame = CGRect(x: 0, y: 0, width: self.eventTable.frame.size.width, height: px)
-//        let line = UIView(frame: frame)
-//        self.eventTable.tableHeaderView = line
-//        line.backgroundColor = self.eventTable.separatorColor
+    }
+    
+    @objc func addNewEvent() {
+        
     }
     
     func setupAvatarView() {
@@ -79,5 +79,10 @@ class EventListViewController: UIViewController, UITableViewDelegate, UITableVie
     
     func getEventImagefrom(name: String) -> UIImage? {
         return UIImage(named: name)
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "EventDetailPage", sender: self)
+        tableView.cellForRow(at: indexPath)?.isSelected = false
     }
 }

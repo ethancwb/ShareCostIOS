@@ -8,6 +8,13 @@ target 'ShareCost' do
   pod "PromiseKit", "~> 6.0"
   pod 'Alamofire', '~> 4.7'
   pod 'PromiseKit/Alamofire', '~> 6.0'
+  pod 'Firebase/Analytics'
+  pod 'Firebase/Core'
+  pod 'Firebase/Storage'
+  pod 'Firebase/Firestore'
+  pod 'Firebase/Auth'
+  pod 'MessageKit'
+  pod 'MessageInputBar'
 
   # Pods for ShareCost
   
