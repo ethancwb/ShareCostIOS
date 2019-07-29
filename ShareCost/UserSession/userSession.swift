@@ -13,6 +13,8 @@ class userSession {
     static let shared = userSession()
     
     var currentUser : User?
+    @objc var acceptedListConnection: [User] = []
+    @objc var pendingListConnection: [User] = []
     // restricted init method to ensure singleton pattern
     private init() {}
     
@@ -23,4 +25,12 @@ class userSession {
     func getCurrentUser() -> User? {
         return self.currentUser
     }
+//    
+//    func setConnectionList(user: User) {
+//        self.currentUser = user
+//    }
+//    
+//    func getConnectionList() -> User? {
+//        return self.currentUser
+//    }
 }

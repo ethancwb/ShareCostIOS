@@ -10,12 +10,21 @@ import UIKit
 import MessageKit
 import Firebase
 import InputBarAccessoryView
+import FirebaseFirestore
 
 class ChatViewController: MessagesViewController, MessagesDataSource {
     
     public var messages : [Message] = []
     public var messageListener: ListenerRegistration?
     var currentUser = userSession.shared.getCurrentUser()
+    var currentPostId: String? = nil
+    
+    private let db = Firestore.firestore()
+    private var reference: CollectionReference?
+    
+    deinit {
+        messageListener?.remove()
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +32,18 @@ class ChatViewController: MessagesViewController, MessagesDataSource {
         messagesCollectionView.messagesLayoutDelegate = self
         messageInputBar.delegate = self
         messagesCollectionView.messagesDisplayDelegate = self
+        
+        reference = db.collection(["events", currentPostId ?? "", "chatroom"].joined(separator: "/"))
+        messageListener = reference?.addSnapshotListener { querySnapshot, error in
+            guard let snapshot = querySnapshot else {
+                print("Error listening for channel updates: \(error?.localizedDescription ?? "No error")")
+                return
+            }
+            
+            snapshot.documentChanges.forEach { change in
+                self.handleDocumentChange(change)
+            }
+        }
     }
     
     override func viewWillLayoutSubviews() {
@@ -38,7 +59,7 @@ class ChatViewController: MessagesViewController, MessagesDataSource {
     }
     
     func currentSender() -> SenderType {
-        return Sender(id: currentUser?.identifier ?? "", displayName: currentUser?.firstName ?? "")
+        return Sender(id: currentUser?.identifier ?? "", displayName: currentUser?.username ?? "")
     }
     
     func messageForItem(at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) -> MessageType {
@@ -66,6 +87,9 @@ extension ChatViewController: MessagesLayoutDelegate {
     func heightForLocation(message: MessageType, at indexPath: IndexPath, with maxWidth: CGFloat, in messagesCollectionView: MessagesCollectionView) -> CGFloat {
         return 0
     }
+    func footerViewSize(for section: Int, in messagesCollectionView: MessagesCollectionView) -> CGSize {
+        return CGSize(width: 0, height: 8)
+    }
 }
 
 extension ChatViewController: MessagesDisplayDelegate {
@@ -78,10 +102,59 @@ extension ChatViewController: MessagesDisplayDelegate {
 
 extension ChatViewController: MessageInputBarDelegate {
     func inputBar(_ inputBar: InputBarAccessoryView, didPressSendButtonWith text: String) {
-        let newMessage = Message.init(author: currentUser!, id: UUID().uuidString, content: text)
-        messages.append(newMessage)
+        let newMessage = Message.init(author: currentUser!, id: UUID().uuidString, content: text, postId: currentPostId ?? "")
+//        messages.append(newMessage)
+        save(newMessage)
         inputBar.inputTextView.text = ""
         messagesCollectionView.reloadData()
         messagesCollectionView.scrollToBottom(animated: true)
+    }
+}
+
+// Helpers
+extension ChatViewController {
+    func save(_ message: Message){
+        reference?.addDocument(data: message.jsonFormat()) { error in
+            if let e = error {
+                print("Error sending message: \(e.localizedDescription)")
+                return
+            }
+            self.messagesCollectionView.scrollToBottom()
+        }
+    }
+    
+    private func handleDocumentChange(_ change: DocumentChange) {
+        guard let message = Message.newFromDocument(doc: change.document) else {
+            return
+        }
+        change.type
+        
+        switch change.type {
+        case .added:
+            insertNewMessage(message)
+            
+        default:
+            break
+        }
+    }
+    
+    private func insertNewMessage(_ message: Message) {
+        guard !messages.contains(message) else {
+            return
+        }
+        
+        messages.append(message)
+        messages.sort()
+        
+        let isLatestMessage = messages.index(of: message) == (messages.count - 1)
+        let shouldScrollToBottom = isLatestMessage
+        
+        messagesCollectionView.reloadData()
+        
+        if shouldScrollToBottom {
+            DispatchQueue.main.async {
+                self.messagesCollectionView.scrollToBottom(animated: true)
+            }
+        }
     }
 }

@@ -100,7 +100,8 @@ class ContactListViewController: TabBarSubViewsViewController, UITableViewDelega
             self.FriendList.allowsSelectionDuringEditing = true
         }
         let successBlock : ([User]) -> Void = { userList in
-            self.dummy_users = userList.map {$0.username}
+            self.dummy_users = userList.map {$0.displayName}
+            userSession.shared.acceptedListConnection = userList
         }
         getUserFriendList(userId: userSession.shared.currentUser?.identifier ?? "", successBlock: successBlock)
     }

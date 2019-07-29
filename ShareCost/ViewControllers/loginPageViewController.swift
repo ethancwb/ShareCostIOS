@@ -43,6 +43,8 @@ class loginPageViewController: UIViewController {
             let successBlock : (User?) -> Void = { response in
                 if let user = response {
                     userSession.shared.setCurrentUser(user: user)
+                    userSession.shared.acceptedListConnection = user.acceptedListConnection
+                    userSession.shared.pendingListConnection = user.pendingListConnection
                     self.performSegue(withIdentifier: "userLoginSegue", sender: nil)
                 } else {
                     self.activityIndicator.isHidden = true;

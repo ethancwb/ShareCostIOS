@@ -7,10 +7,11 @@
 //
 
 import UIKit
+import Foundation
 
 class FriendRequestViewController: TabBarSubViewsViewController, UITableViewDelegate, UITableViewDataSource {
     
-    var newFriendsList = ["Alex xander", "Mora Lin", "Peter Pan"]
+    var newFriendsList : [String] = userSession.shared.pendingListConnection.map { $0.displayName }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return newFriendsList.count
@@ -36,6 +37,7 @@ class FriendRequestViewController: TabBarSubViewsViewController, UITableViewDele
         friendTableView.delegate = self
         friendTableView.dataSource = self
         self.navigationItem.largeTitleDisplayMode = .never
+        friendTableView.tableFooterView = UIView()
     }
     
     override func viewWillAppear(_ animated: Bool) {

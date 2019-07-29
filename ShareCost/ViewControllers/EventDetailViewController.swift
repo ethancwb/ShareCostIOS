@@ -17,6 +17,7 @@ class EventDetailViewController: UIViewController {
     @IBOutlet weak var mainheader: UIView!
     @IBOutlet weak var chatView: UIView!
     
+    var currentPostId : String? = nil
     let chatroomview = ChatViewController()
     
 //    private var messages: [[String : String]] = []
@@ -25,6 +26,7 @@ class EventDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupHeaderImage()
+        chatroomview.currentPostId = currentPostId
         chatroomview.view.frame = chatView.bounds
         chatView.addSubview(chatroomview.view)
     }
