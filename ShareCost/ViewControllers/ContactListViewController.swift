@@ -89,6 +89,7 @@ class ContactListViewController: TabBarSubViewsViewController, UITableViewDelega
         self.navigationItem.title = "Friends"
         self.FriendList.delegate = self
         self.FriendList.dataSource = self
+        self.FriendList.tableFooterView = UIView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -99,11 +100,11 @@ class ContactListViewController: TabBarSubViewsViewController, UITableViewDelega
             self.FriendList.allowsMultipleSelection = true
             self.FriendList.allowsSelectionDuringEditing = true
         }
-        let successBlock : ([User]) -> Void = { userList in
-            self.dummy_users = userList.map {$0.displayName}
-            userSession.shared.acceptedListConnection = userList
+        let successBlock : () -> Void = {
+            self.dummy_users = userSession.shared.acceptedListConnection.map {$0.displayName}
+            self.FriendList.reloadData()
         }
-        getUserFriendList(userId: userSession.shared.currentUser?.identifier ?? "", successBlock: successBlock)
+        getUserFriendList(userId: userSession.shared.currentUser?.identifier ?? "", status: "2", successBlock: successBlock)
     }
     
     @IBAction func addFriend(_ sender: Any) {

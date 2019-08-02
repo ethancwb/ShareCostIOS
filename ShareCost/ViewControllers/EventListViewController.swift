@@ -61,7 +61,6 @@ class EventListViewController: UIViewController, UITableViewDelegate, UITableVie
         let cell = tableView.dequeueReusableCell(withIdentifier: "EventListCell", for: indexPath) as! EventTableViewCell
         cell.separatorInset = UIEdgeInsets.zero
         cell.eventTitle.text = demoEvent[indexPath.item].title
-        cell.eventHost.text = demoEvent[indexPath.item].host.username
         cell.eventSummary.text = demoEvent[indexPath.item].summary
         cell.eventCategory.image = getCategoryFrom(name: demoEvent[indexPath.item].category!)
         cell.eventImage.image = getEventImagefrom(name: demoEvent[indexPath.item].profileImage!)

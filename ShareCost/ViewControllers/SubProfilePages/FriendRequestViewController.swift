@@ -11,7 +11,7 @@ import Foundation
 
 class FriendRequestViewController: TabBarSubViewsViewController, UITableViewDelegate, UITableViewDataSource {
     
-    var newFriendsList : [String] = userSession.shared.pendingListConnection.map { $0.displayName }
+    var newFriendsList : [String] = []
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return newFriendsList.count
@@ -48,6 +48,12 @@ class FriendRequestViewController: TabBarSubViewsViewController, UITableViewDele
             navcontroller.setupNormal()
             self.setupNavigationBar()
         }
+
+        let successBlock : () -> Void = {
+            self.newFriendsList = userSession.shared.pendingListConnection.map {$0.displayName}
+            self.friendTableView.reloadData()
+        }
+        getUserFriendList(userId: userSession.shared.currentUser?.identifier ?? "", status: "1", successBlock: successBlock)
     }
     
     @IBAction func onAccept(_ sender: Any) {

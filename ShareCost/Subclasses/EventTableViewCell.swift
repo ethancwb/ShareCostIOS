@@ -12,7 +12,6 @@ class EventTableViewCell: UITableViewCell {
     
     @IBOutlet weak var eventImage: UIImageView!
     @IBOutlet weak var eventCategory: UIImageView!
-    @IBOutlet weak var eventHost: UILabel!
     @IBOutlet weak var eventTitle: UILabel!
     @IBOutlet weak var eventSummary: UITextView!
     
