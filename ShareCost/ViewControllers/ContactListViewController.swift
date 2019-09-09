@@ -104,7 +104,7 @@ class ContactListViewController: TabBarSubViewsViewController, UITableViewDelega
             self.dummy_users = userSession.shared.acceptedListConnection.map {$0.displayName}
             self.FriendList.reloadData()
         }
-        getUserFriendList(userId: userSession.shared.currentUser?.identifier ?? "", status: "2", successBlock: successBlock)
+        getUserFriendList(path: "friend/getfriend", successBlock: successBlock)
     }
     
     @IBAction func addFriend(_ sender: Any) {

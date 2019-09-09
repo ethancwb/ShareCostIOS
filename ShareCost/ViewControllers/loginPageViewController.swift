@@ -29,6 +29,9 @@ class loginPageViewController: UIViewController {
         super.viewWillAppear(animated)
         self.activityIndicator.isHidden = true
         self.navigationController?.navigationBar.isHidden = true
+        // hack
+        usernameField.text = "username1"
+        passwordField.text = "password1"
     }
     
     @IBAction func onRegisterPressed(_ sender: Any) {
@@ -43,8 +46,8 @@ class loginPageViewController: UIViewController {
             let successBlock : (User?) -> Void = { response in
                 if let user = response {
                     userSession.shared.setCurrentUser(user: user)
-                    userSession.shared.acceptedListConnection = user.acceptedListConnection
-                    userSession.shared.pendingListConnection = user.pendingListConnection
+                    userSession.shared.currentUser?.acceptedListConnection = user.acceptedListConnection
+                    userSession.shared.currentUser?.pendingListConnection = user.pendingListConnection
                     self.performSegue(withIdentifier: "userLoginSegue", sender: nil)
                 } else {
                     self.activityIndicator.isHidden = true;

@@ -53,7 +53,7 @@ class FriendRequestViewController: TabBarSubViewsViewController, UITableViewDele
             self.newFriendsList = userSession.shared.pendingListConnection.map {$0.displayName}
             self.friendTableView.reloadData()
         }
-        getUserFriendList(userId: userSession.shared.currentUser?.identifier ?? "", status: "1", successBlock: successBlock)
+        getUserFriendList(path: "friend/getpending", successBlock: successBlock)
     }
     
     @IBAction func onAccept(_ sender: Any) {

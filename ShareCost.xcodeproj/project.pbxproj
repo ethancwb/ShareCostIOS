@@ -40,6 +40,10 @@
 		15AD475722626D1300832422 /* FriendRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15AD475622626D1300832422 /* FriendRequestViewController.swift */; };
 		15AD475922626E7C00832422 /* NewFriendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15AD475822626E7C00832422 /* NewFriendTableViewCell.swift */; };
 		15AD475B22627AD700832422 /* CustomCellButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15AD475A22627AD700832422 /* CustomCellButton.swift */; };
+		15B28D6A2325D56A00561AF8 /* createEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B28D692325D56A00561AF8 /* createEventViewController.swift */; };
+		15B28D6C2325D67500561AF8 /* NewEventTitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B28D6B2325D67500561AF8 /* NewEventTitleTableViewCell.swift */; };
+		15B28D6E2325D70700561AF8 /* SegmentedControllerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B28D6D2325D70700561AF8 /* SegmentedControllerTableViewCell.swift */; };
+		15B28D702325E2F200561AF8 /* CategoryCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B28D6F2325E2F200561AF8 /* CategoryCellTableViewCell.swift */; };
 		15B60E532274FDEC004B39A1 /* userSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B60E522274FDEC004B39A1 /* userSession.swift */; };
 		15B7F72A22E3B34000E2162F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 15B7F72922E3B33F00E2162F /* GoogleService-Info.plist */; };
 		15D6FC372247215000FA6E74 /* SplitWeightVIewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D6FC362247215000FA6E74 /* SplitWeightVIewController.swift */; };
@@ -109,6 +113,10 @@
 		15AD475622626D1300832422 /* FriendRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendRequestViewController.swift; sourceTree = "<group>"; };
 		15AD475822626E7C00832422 /* NewFriendTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewFriendTableViewCell.swift; sourceTree = "<group>"; };
 		15AD475A22627AD700832422 /* CustomCellButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCellButton.swift; sourceTree = "<group>"; };
+		15B28D692325D56A00561AF8 /* createEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = createEventViewController.swift; sourceTree = "<group>"; };
+		15B28D6B2325D67500561AF8 /* NewEventTitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEventTitleTableViewCell.swift; sourceTree = "<group>"; };
+		15B28D6D2325D70700561AF8 /* SegmentedControllerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControllerTableViewCell.swift; sourceTree = "<group>"; };
+		15B28D6F2325E2F200561AF8 /* CategoryCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCellTableViewCell.swift; sourceTree = "<group>"; };
 		15B60E522274FDEC004B39A1 /* userSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userSession.swift; sourceTree = "<group>"; };
 		15B7F72922E3B33F00E2162F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		15D6FC362247215000FA6E74 /* SplitWeightVIewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitWeightVIewController.swift; sourceTree = "<group>"; };
@@ -246,6 +254,9 @@
 				15AD475A22627AD700832422 /* CustomCellButton.swift */,
 				15F0483222D97DE000AFB8E3 /* EventTableViewCell.swift */,
 				157598FE22E3C8F700061DE9 /* ChatViewController.swift */,
+				15B28D6B2325D67500561AF8 /* NewEventTitleTableViewCell.swift */,
+				15B28D6D2325D70700561AF8 /* SegmentedControllerTableViewCell.swift */,
+				15B28D6F2325E2F200561AF8 /* CategoryCellTableViewCell.swift */,
 			);
 			path = Subclasses;
 			sourceTree = "<group>";
@@ -265,6 +276,7 @@
 				15262BF82299D2B5005ABC15 /* SearchFriendViewController.swift */,
 				15F0483022D96C2000AFB8E3 /* EventListViewController.swift */,
 				15F0483422DABB9E00AFB8E3 /* EventDetailViewController.swift */,
+				15B28D692325D56A00561AF8 /* createEventViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -550,6 +562,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15B28D6C2325D67500561AF8 /* NewEventTitleTableViewCell.swift in Sources */,
 				156D1E7D224FFC3100B09632 /* editProfileViewController.swift in Sources */,
 				15A2BC342234A0F200ED5263 /* TabBarSubViewsViewController.swift in Sources */,
 				15AD47552262610300832422 /* ContactUsViewController.swift in Sources */,
@@ -570,6 +583,7 @@
 				156D1E7F2250023B00B09632 /* editProfileTableViewCell.swift in Sources */,
 				157598FF22E3C8F700061DE9 /* ChatViewController.swift in Sources */,
 				1575990122E3CDCF00061DE9 /* MessageModel.swift in Sources */,
+				15B28D6A2325D56A00561AF8 /* createEventViewController.swift in Sources */,
 				15262BF92299D2B5005ABC15 /* SearchFriendViewController.swift in Sources */,
 				15F0483322D97DE000AFB8E3 /* EventTableViewCell.swift in Sources */,
 				1575990322E5175A00061DE9 /* EventModel.swift in Sources */,
@@ -583,7 +597,9 @@
 				157E329E226BAD970050CA06 /* transcationModel.swift in Sources */,
 				157E329C226BAD8A0050CA06 /* userModel.swift in Sources */,
 				159750D7222B4947006427BA /* LaunchScreenViewController.swift in Sources */,
+				15B28D702325E2F200561AF8 /* CategoryCellTableViewCell.swift in Sources */,
 				1564AFEF2222032800A5B52B /* ProfilePageViewController.swift in Sources */,
+				15B28D6E2325D70700561AF8 /* SegmentedControllerTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

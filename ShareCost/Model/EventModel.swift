@@ -12,17 +12,16 @@ import UIKit
 class Event {
     
     let identifier: String
-    var host: User
     var summary: String
     var title: String
     
-    init(host: User, summary: String, title: String) {
-        self.identifier = "abcer-qwet123-51234125"
+    init(summary: String, title: String, id: String) {
+        self.identifier = id
         self.summary = summary
         self.title = title
-        self.host = host
     }
     
     var category: String?
     var profileImage: String?
+    var host: User?
 }

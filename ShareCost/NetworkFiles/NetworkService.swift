@@ -16,6 +16,25 @@ func sendPostRequest(params: [String : String]) {
     
 }
 
+func getItem(path: String, successBlock: @escaping (Any?) -> Void, errBlock: @escaping () -> Void = {}, fullServerPath: String? = nil) {
+    let requestPath = fullServerPath != nil ? fullServerPath : fullPath(path: path)
+    Alamofire.request(requestPath!, method: .get,
+                      encoding: JSONEncoding.default, headers: nil).validate().responseJSON { response in
+                        switch response.result {
+                        case .success(_):
+                            successBlock(response.result.value)
+                        case .failure(let err):
+                            print("get list failed \(err)")
+                            errBlock()
+                        }
+    }
+}
+
+func fullPath(path: String) -> String {
+    let userId = userSession.shared.getCurrentUser()?.identifier ?? ""
+    return "\(API_ROUTE)/\(path)/\(userId)"
+}
+
 func sendLoginInfo(username: String, password: String, completionBlock: @escaping (User?) -> Void, errorBlock: @escaping () -> Void) {
     Alamofire.request("\(API_ROUTE)/user/userlogin", method: .post,
                       parameters: ["username": username,
@@ -83,59 +102,46 @@ func registerNewUser(username: String, password: String, completionBlock: @escap
     }
 }
 
-func getUserFriendList(userId: String, status: String, successBlock: @escaping () -> Void) {
-    Alamofire.request("\(API_ROUTE)/friend/getFriends", method: .post,
-                      parameters: ["from": userId,
-                                   "status": status],
-                      encoding: JSONEncoding.default, headers: nil).validate().responseJSON { response in
-                        switch response.result {
-                        case .success(let data):
-                            if let userJson = response.result.value as? [[String : Any]] {
-                                for user in userJson {
-                                    let new_user = User.init(username: user["username"] as! String, identifier: user["id"] as! String)
-                                    new_user.firstName = user["firstname"] as? String
-                                    new_user.lastName = user["lastname"] as? String
-                                    if status == "1" {
-                                        if (!(userSession.shared.currentUser?.pendingListConnection.map{$0.identifier}.contains(new_user.identifier))!) {
-                                            userSession.shared.currentUser?.pendingListConnection.append(new_user)
-                                        }
-                                    }
-                                    if status == "2" {
-                                        if (!(userSession.shared.currentUser?.acceptedListConnection.map{$0.identifier}.contains(new_user.identifier))!) {
-                                            userSession.shared.currentUser?.acceptedListConnection.append(new_user)
-                                        }
-                                    }
-                                }
-                                successBlock()
-                            }
-                        case .failure(let err):
-                            print("get list failed")
-                        }
+func getUserFriendList(path: String, successBlock: @escaping () -> Void) {
+    let parseBlock : (Any) -> Void = { result in
+        if let userJson = result as? [[String : Any]] {
+            for user in userJson {
+                let new_user = User.init(username: user["username"] as! String, identifier: user["id"] as! String)
+                new_user.firstName = user["firstname"] as? String
+                new_user.lastName = user["lastname"] as? String
+                if path.contains("pending") {
+                    if (!(userSession.shared.currentUser?.pendingListConnection.map{$0.identifier}.contains(new_user.identifier))!) {
+                        userSession.shared.currentUser?.pendingListConnection.append(new_user)
+                    }
+                }
+                if path.contains("getfriend") {
+                    if (!(userSession.shared.currentUser?.acceptedListConnection.map{$0.identifier}.contains(new_user.identifier))!) {
+                        userSession.shared.currentUser?.acceptedListConnection.append(new_user)
+                    }
+                }
+            }
+            successBlock()
+        }
+    }
+    getItem(path: path, successBlock: parseBlock)
+}
+
+func addUser(userId: String, requestName: String, successBlock: @escaping (Any?) -> Void, errorBlock: @escaping () -> Void) {
+    if let userId = userSession.shared.currentUser?.identifier {
+        let name = requestName.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
+        let path = "\(API_ROUTE)/friend/request/\(userId)/\(name)"
+        getItem(path: "", successBlock: successBlock, errBlock: errorBlock, fullServerPath: path)
     }
 }
 
-func addUser(userId: String, requestName: String, successBlock: @escaping () -> Void, errorBlock: @escaping () -> Void) {
-    Alamofire.request("\(API_ROUTE)/friend/request", method: .post,
-                      parameters: ["from": userId,
-                                   "to": requestName],
+func getAllEvents(userId: String, successBlock: @escaping ([[String : Any]]) -> Void, errorBlock: @escaping () -> Void) {
+    Alamofire.request("\(API_ROUTE)/event/allEvents", method: .post,
+                      parameters: ["user_id": userId],
                       encoding: JSONEncoding.default, headers: nil).validate().responseJSON { response in
                         if let statusCode = response.response?.statusCode {
-                            if statusCode <= 300 {
-                                successBlock()
-                            } else {
-                                errorBlock()
-                            }
-                        }
-    }
-}
-
-func getPendingRequests(userId: String, successBlock: @escaping () -> Void, errorBlock: @escaping () -> Void) {
-    Alamofire.request("\(API_ROUTE)/connection/get", method: .post,
-                      parameters: ["identifier": userId],
-                      encoding: JSONEncoding.default, headers: nil).validate().responseJSON { response in
-                        if let statusCode = response.response?.statusCode {
-                            if statusCode <= 300 {
-                                successBlock()
+                            if statusCode <= 300,
+                                let res = response.result.value as? [[String : Any]] {
+                                successBlock(res)
                             } else {
                                 errorBlock()
                             }

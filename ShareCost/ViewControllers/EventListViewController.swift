@@ -14,15 +14,17 @@ class EventListViewController: UIViewController, UITableViewDelegate, UITableVie
     @IBOutlet weak var avatarButton: UIButton!
     @IBOutlet weak var eventTable: UITableView!
     
-    var demoEvent : [Event] {
-        let event1 = Event.init(host: userSession.shared.getCurrentUser()!, summary: "asdf wer asdf zxv sdfwqe rxcvfd dasff wer qwet qerqer", title: "White Mountain Hiking")
-        event1.category = "Hiking"
-        event1.profileImage = "white_mountain"
-        let event2 = Event.init(host: userSession.shared.getCurrentUser()!, summary: "asdf wer asdf zxv sdfwqe rxcvfd dasff wer qwet qerqer", title: "Six Flag Field Trip")
-        event2.category = "Theme Park"
-        event2.profileImage = "six_flag"
-        return [event1, event2]
-    }
+//    var demoEvent : [Event] {
+//        let event1 = Event.init(host: userSession.shared.getCurrentUser()!, summary: "asdf wer asdf zxv sdfwqe rxcvfd dasff wer qwet qerqer", title: "White Mountain Hiking")
+//        event1.category = "Hiking"
+//        event1.profileImage = "white_mountain"
+//        let event2 = Event.init(host: userSession.shared.getCurrentUser()!, summary: "asdf wer asdf zxv sdfwqe rxcvfd dasff wer qwet qerqer", title: "Six Flag Field Trip")
+//        event2.category = "Theme Park"
+//        event2.profileImage = "six_flag"
+//        return [event1, event2]
+//    }
+    
+    var demoEvent : [Event] = []
     
     var avatarImage = UIImage(named:"avatar_icon_placeholder")
     
@@ -41,10 +43,26 @@ class EventListViewController: UIViewController, UITableViewDelegate, UITableVie
         if let navcontroller = self.navigationController as? CustomNavigationBarViewController {
             navcontroller.setupTranslucent()
         }
+        let successBlock : (Any) -> Void = { result in
+            if let event_headers = result as? [[String : Any]] {
+                for header in event_headers {
+                    if let summary = header["summary"] as? String,
+                        let title = header["title"] as? String,
+                        let id = header["id"] as? String {
+                        if !((self.demoEvent.map {$0.identifier}).contains(id)) {
+                            let event = Event.init(summary: summary, title: title, id: id)
+                            self.demoEvent.append(event)
+                            self.eventTable.reloadData()
+                        }
+                    }
+                }
+            }
+        }
+        getAllEvents(userId: (userSession.shared.currentUser?.identifier)!, successBlock: successBlock, errorBlock: {})
     }
     
     @objc func addNewEvent() {
-        
+        performSegue(withIdentifier: "createNewEvent", sender: nil)
     }
     
     func setupAvatarView() {
@@ -62,8 +80,8 @@ class EventListViewController: UIViewController, UITableViewDelegate, UITableVie
         cell.separatorInset = UIEdgeInsets.zero
         cell.eventTitle.text = demoEvent[indexPath.item].title
         cell.eventSummary.text = demoEvent[indexPath.item].summary
-        cell.eventCategory.image = getCategoryFrom(name: demoEvent[indexPath.item].category!)
-        cell.eventImage.image = getEventImagefrom(name: demoEvent[indexPath.item].profileImage!)
+//        cell.eventCategory.image = getCategoryFrom(name: demoEvent[indexPath.item].category!)
+//        cell.eventImage.image = getEventImagefrom(name: demoEvent[indexPath.item].profileImage!)
         return cell
     }
     

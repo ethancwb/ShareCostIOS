@@ -13,8 +13,12 @@ class userSession {
     static let shared = userSession()
     
     var currentUser : User?
-    @objc var acceptedListConnection: [User] = []
-    @objc var pendingListConnection: [User] = []
+    @objc var acceptedListConnection: [User] {
+        return currentUser?.acceptedListConnection ?? []
+    }
+    @objc var pendingListConnection: [User] {
+        return currentUser?.pendingListConnection ?? []
+    }
     // restricted init method to ensure singleton pattern
     private init() {}
     
