@@ -44,6 +44,8 @@
 		15B28D6C2325D67500561AF8 /* NewEventTitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B28D6B2325D67500561AF8 /* NewEventTitleTableViewCell.swift */; };
 		15B28D6E2325D70700561AF8 /* SegmentedControllerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B28D6D2325D70700561AF8 /* SegmentedControllerTableViewCell.swift */; };
 		15B28D702325E2F200561AF8 /* CategoryCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B28D6F2325E2F200561AF8 /* CategoryCellTableViewCell.swift */; };
+		15B48C322329D0FD008468DB /* EventCategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B48C312329D0FD008468DB /* EventCategoryTableViewCell.swift */; };
+		15B48C342329D459008468DB /* eventCategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B48C332329D459008468DB /* eventCategoryModel.swift */; };
 		15B60E532274FDEC004B39A1 /* userSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B60E522274FDEC004B39A1 /* userSession.swift */; };
 		15B7F72A22E3B34000E2162F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 15B7F72922E3B33F00E2162F /* GoogleService-Info.plist */; };
 		15D6FC372247215000FA6E74 /* SplitWeightVIewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D6FC362247215000FA6E74 /* SplitWeightVIewController.swift */; };
@@ -117,6 +119,8 @@
 		15B28D6B2325D67500561AF8 /* NewEventTitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEventTitleTableViewCell.swift; sourceTree = "<group>"; };
 		15B28D6D2325D70700561AF8 /* SegmentedControllerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControllerTableViewCell.swift; sourceTree = "<group>"; };
 		15B28D6F2325E2F200561AF8 /* CategoryCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCellTableViewCell.swift; sourceTree = "<group>"; };
+		15B48C312329D0FD008468DB /* EventCategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCategoryTableViewCell.swift; sourceTree = "<group>"; };
+		15B48C332329D459008468DB /* eventCategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eventCategoryModel.swift; sourceTree = "<group>"; };
 		15B60E522274FDEC004B39A1 /* userSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userSession.swift; sourceTree = "<group>"; };
 		15B7F72922E3B33F00E2162F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		15D6FC362247215000FA6E74 /* SplitWeightVIewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitWeightVIewController.swift; sourceTree = "<group>"; };
@@ -236,6 +240,7 @@
 				157E329D226BAD970050CA06 /* transcationModel.swift */,
 				1575990022E3CDCF00061DE9 /* MessageModel.swift */,
 				1575990222E5175A00061DE9 /* EventModel.swift */,
+				15B48C332329D459008468DB /* eventCategoryModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -257,6 +262,7 @@
 				15B28D6B2325D67500561AF8 /* NewEventTitleTableViewCell.swift */,
 				15B28D6D2325D70700561AF8 /* SegmentedControllerTableViewCell.swift */,
 				15B28D6F2325E2F200561AF8 /* CategoryCellTableViewCell.swift */,
+				15B48C312329D0FD008468DB /* EventCategoryTableViewCell.swift */,
 			);
 			path = Subclasses;
 			sourceTree = "<group>";
@@ -566,6 +572,7 @@
 				156D1E7D224FFC3100B09632 /* editProfileViewController.swift in Sources */,
 				15A2BC342234A0F200ED5263 /* TabBarSubViewsViewController.swift in Sources */,
 				15AD47552262610300832422 /* ContactUsViewController.swift in Sources */,
+				15B48C342329D459008468DB /* eventCategoryModel.swift in Sources */,
 				15AD475922626E7C00832422 /* NewFriendTableViewCell.swift in Sources */,
 				159750D1222B3DEA006427BA /* CustomNavigationBarViewController.swift in Sources */,
 				15AD475722626D1300832422 /* FriendRequestViewController.swift in Sources */,
@@ -599,6 +606,7 @@
 				159750D7222B4947006427BA /* LaunchScreenViewController.swift in Sources */,
 				15B28D702325E2F200561AF8 /* CategoryCellTableViewCell.swift in Sources */,
 				1564AFEF2222032800A5B52B /* ProfilePageViewController.swift in Sources */,
+				15B48C322329D0FD008468DB /* EventCategoryTableViewCell.swift in Sources */,
 				15B28D6E2325D70700561AF8 /* SegmentedControllerTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

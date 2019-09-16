@@ -1,18 +1,18 @@
 //
-//  CategoryCellTableViewCell.swift
+//  EventCategoryTableViewCell.swift
 //  ShareCost
 //
-//  Created by Wenbin Chen on 9/8/19.
+//  Created by Wenbin Chen on 9/11/19.
 //  Copyright © 2019 share-cost-project. All rights reserved.
 //
 
 import UIKit
 
-class CategoryCellTableViewCell: UITableViewCell {
-    
-    @IBOutlet weak var categoryButton: UIButton!
-    @IBOutlet weak var categoryValue: UITextField!
+class EventCategoryTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var categoryText: UILabel!
+    @IBOutlet weak var categoryImage: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

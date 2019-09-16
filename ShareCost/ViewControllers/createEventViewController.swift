@@ -11,6 +11,8 @@ import UIKit
 class createEventViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var upperTableView: UITableView!
+    @IBOutlet var categoryListView: UIView!
+    @IBOutlet weak var eventCategoryList: UITableView!
     
     let cellIdentifiers = ["titleFieldCell", "categoryCell", "segmentedCell"]
     
@@ -36,7 +38,13 @@ class createEventViewController: UIViewController, UITableViewDelegate, UITableV
     }
     
     @IBAction func onCategoryButtonClicked(_ sender: Any) {
-        
+        let frame = CGRect.init(x: 140.0, y: 220.0, width: categoryListView.frame.width, height: categoryListView.frame.height)
+        categoryListView.frame = frame
+        view.addSubview(categoryListView)
+    }
+    
+    @IBAction func onCategoryDone(_ sender: Any) {
+        categoryListView.removeFromSuperview()
     }
     
     override func viewDidLoad() {

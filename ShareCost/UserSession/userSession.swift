@@ -7,12 +7,15 @@
 //
 
 import Foundation
+import UIKit
 
 class userSession {
     
     static let shared = userSession()
     
     var currentUser : User?
+    var allEventCategories : [eventCategory] = []
+    
     @objc var acceptedListConnection: [User] {
         return currentUser?.acceptedListConnection ?? []
     }
@@ -20,7 +23,9 @@ class userSession {
         return currentUser?.pendingListConnection ?? []
     }
     // restricted init method to ensure singleton pattern
-    private init() {}
+    private init() {
+
+    }
     
     func setCurrentUser(user: User) {
         self.currentUser = user
@@ -29,12 +34,22 @@ class userSession {
     func getCurrentUser() -> User? {
         return self.currentUser
     }
-//    
-//    func setConnectionList(user: User) {
-//        self.currentUser = user
-//    }
-//    
-//    func getConnectionList() -> User? {
-//        return self.currentUser
-//    }
+    
+    func setupEventCategories() {
+        var cats : [eventCategory] = []
+        for cat in eventCategories.allCases {
+            cats.append(eventCategory.init(name: cat.rawValue, image: UIImage(named: "")))
+        }
+    }
+
+}
+
+public enum eventCategories : String, CaseIterable {
+    case hiking = "Hiking"
+    case dinner = "Dinner"
+    case sport = "Sport"
+    case gathering = "Gathering"
+    case party = "Party"
+    case fieldTrip = "FieldTrip"
+    case others = "Others"
 }
