@@ -52,9 +52,16 @@ class createEventViewController: UIViewController, UITableViewDelegate, UITableV
         upperTableView.delegate = self
         upperTableView.dataSource = self
         upperTableView.tableFooterView = UIView()
+        self.setupToHideKeyboardOnTapOnView()
         // Do any additional setup after loading the view.
     }
     
     
-
+    @IBAction func onCancel(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func onDone(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
 }

@@ -38,6 +38,7 @@ class FriendRequestViewController: TabBarSubViewsViewController, UITableViewDele
         friendTableView.dataSource = self
         self.navigationItem.largeTitleDisplayMode = .never
         friendTableView.tableFooterView = UIView()
+        self.setupToHideKeyboardOnTapOnView()
     }
     
     override func viewWillAppear(_ animated: Bool) {

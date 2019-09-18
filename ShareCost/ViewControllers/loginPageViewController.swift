@@ -23,6 +23,7 @@ class loginPageViewController: UIViewController {
         let backgroundImage = addBackground()
         self.view.addSubview(backgroundImage)
         self.view.sendSubviewToBack(backgroundImage)
+        self.setupToHideKeyboardOnTapOnView()
     }
     
     override func viewWillAppear(_ animated: Bool) {

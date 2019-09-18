@@ -36,6 +36,7 @@ class EventListViewController: UIViewController, UITableViewDelegate, UITableVie
         eventTable.delegate = self
         eventTable.dataSource = self
         eventTable.tableFooterView = UIView()
+        self.setupToHideKeyboardOnTapOnView()
     }
     
     override func viewWillAppear(_ animated: Bool) {

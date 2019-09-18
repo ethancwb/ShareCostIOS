@@ -15,6 +15,7 @@ class userSession {
     
     var currentUser : User?
     var allEventCategories : [eventCategory] = []
+    public var isLocalServer : Bool = true
     
     @objc var acceptedListConnection: [User] {
         return currentUser?.acceptedListConnection ?? []
@@ -37,9 +38,9 @@ class userSession {
     
     func setupEventCategories() {
         var cats : [eventCategory] = []
-        for cat in eventCategories.allCases {
-            cats.append(eventCategory.init(name: cat.rawValue, image: UIImage(named: "")))
-        }
+//        for cat in eventCategories.allCases {
+//            cats.append(eventCategory.init(name: cat.rawValue, image: UIImage(named: "")))
+//        }
     }
 
 }

@@ -17,6 +17,7 @@ class transcationTableViewController: TabBarSubViewsViewController, UITableViewD
         self.navigationItem.largeTitleDisplayMode = .never
         transcationTable.delegate = self
         transcationTable.dataSource = self
+        self.setupToHideKeyboardOnTapOnView()
     }
     
     override func viewWillAppear(_ animated: Bool) {

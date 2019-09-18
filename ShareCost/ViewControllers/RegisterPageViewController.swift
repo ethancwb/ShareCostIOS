@@ -20,6 +20,7 @@ class RegisterPageViewController: UIViewController {
         let backgroundImage = addBackground()
         self.view.addSubview(backgroundImage)
         self.view.sendSubviewToBack(backgroundImage)
+        self.setupToHideKeyboardOnTapOnView()
     }
     
     @IBAction func onCancel(_ sender: Any) {

@@ -27,6 +27,7 @@ class editProfileViewController: UIViewController, UITableViewDelegate, UITableV
         userInfoTable.delegate = self
         userInfoTable.dataSource = self
         computeUserDictionary()
+        self.setupToHideKeyboardOnTapOnView()
     }
     
     @objc func onEdit() {

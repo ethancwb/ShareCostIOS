@@ -10,7 +10,7 @@ import Foundation
 import Alamofire
 import PromiseKit
 
-let API_ROUTE = "http://localhost:8000/api"
+let API_ROUTE = "https://sharecostnew.herokuapp.com/api"
 
 func sendPostRequest(params: [String : String]) {
     

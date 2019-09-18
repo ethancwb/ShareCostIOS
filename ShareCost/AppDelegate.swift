@@ -20,6 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        UINavigationBar.appearance().backgroundColor = getHeaderColor()
 //        UIBarButtonItem.appearance().tintColor = getHeaderColor()
         FirebaseApp.configure()
+        userSession.shared.isLocalServer = isLocalEnv()
         return true
     }
 
@@ -43,6 +44,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+    
+    func isLocalEnv() -> Bool {
+        guard let path = Bundle.main.appStoreReceiptURL?.path else { return false }
+        return path.contains("CoreSimulator") || path.contains("sandboxReceipt")
     }
 
 

@@ -14,6 +14,7 @@ class SearchFriendViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.setupToHideKeyboardOnTapOnView()
     }
     
     @IBAction func onAdd(_ sender: Any) {

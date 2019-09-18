@@ -25,20 +25,20 @@ class ContactListViewController: TabBarSubViewsViewController, UITableViewDelega
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "FriendCell", for:indexPath) as! FriendsTableViewCell
-        cell.balance.text = "Balance:" + dummy_balance[indexPath.item]
+//        cell.balance.text = "Balance:" + dummy_balance[indexPath.item]
         cell.username.text = dummy_users[indexPath.item]
         if let avatar = UIImage(named: "avatar_icon_placeholder") {
             cell.imageView?.image = resizeImage(image: avatar, toSize: CGSize.init(width: 65, height: 65))
         }
         cell.imageView?.clipsToBounds = true
-        if (status[indexPath.item] == "balance") {
-            cell.moneyStatus.textColor = UIColor(red:0.00, green:0.80, blue:0.40, alpha:1.0)
-            cell.moneyStatus.text = status[indexPath.item]
-        }
-        if (status[indexPath.item] == "owed") {
-            cell.moneyStatus.textColor = UIColor.red
-            cell.moneyStatus.text = status[indexPath.item]
-        }
+//        if (status[indexPath.item] == "balance") {
+//            cell.moneyStatus.textColor = UIColor(red:0.00, green:0.80, blue:0.40, alpha:1.0)
+//            cell.moneyStatus.text = status[indexPath.item]
+//        }
+//        if (status[indexPath.item] == "owed") {
+//            cell.moneyStatus.textColor = UIColor.red
+//            cell.moneyStatus.text = status[indexPath.item]
+//        }
         cell.separatorInset = UIEdgeInsets.zero
         return cell
     }
@@ -90,6 +90,7 @@ class ContactListViewController: TabBarSubViewsViewController, UITableViewDelega
         self.FriendList.delegate = self
         self.FriendList.dataSource = self
         self.FriendList.tableFooterView = UIView()
+        self.setupToHideKeyboardOnTapOnView()
     }
     
     override func viewWillAppear(_ animated: Bool) {

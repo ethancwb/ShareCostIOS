@@ -43,6 +43,7 @@ class ProfilePageViewController: UIViewController, UITableViewDelegate, UITableV
         self.profileSettingTable.delegate = self
         self.logoutSettingsTable.dataSource = self
         self.logoutSettingsTable.delegate = self
+        self.setupToHideKeyboardOnTapOnView()
         self.profileSettingTable.frame = CGRect(x: self.profileSettingTable.frame.origin.x, y: self.profileSettingTable.frame.origin.y, width: self.profileSettingTable.frame.size.width, height: self.profileSettingTable.contentSize.height)
         self.logoutSettingsTable.frame = CGRect(x: self.logoutSettingsTable.frame.origin.x, y: self.logoutSettingsTable.frame.origin.y, width: self.logoutSettingsTable.frame.size.width, height: self.logoutSettingsTable.contentSize.height)
     }

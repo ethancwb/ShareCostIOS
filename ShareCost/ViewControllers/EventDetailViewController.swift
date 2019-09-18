@@ -29,6 +29,7 @@ class EventDetailViewController: UIViewController {
         chatroomview.currentPostId = currentPostId
         chatroomview.view.frame = chatView.bounds
         chatView.addSubview(chatroomview.view)
+        self.setupToHideKeyboardOnTapOnView()
     }
     
     func setupHeaderImage() {

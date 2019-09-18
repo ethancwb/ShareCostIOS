@@ -17,6 +17,7 @@ class TabBarSubViewsViewController: UIViewController, UISearchResultsUpdating, U
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupNavigationBar()
+        self.setupToHideKeyboardOnTapOnView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
